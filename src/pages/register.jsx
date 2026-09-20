@@ -30,7 +30,7 @@ function Register(){
                 <input type="password" placeholder="create a password" onChange={(e)=>setpassword(e.target.value)}/>
             </div>
             <button type="submit">Register</button>
-            <p>already have an account<Link to="/login">login</Link></p>
+            <p>already have an account?<Link to="/login">login</Link></p>
         </form>
     </div>
     )
