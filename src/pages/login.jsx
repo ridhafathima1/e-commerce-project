@@ -22,7 +22,7 @@ function Login(){
                 <div className="mb-4">
                     <label className="mb-2 block font-medium text-gray-700">email</label>
                     <input type="email" 
-                    placeholder="enter your email" onChange={(e)=>setemail(e.target.value)}               className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-pink-500"/>
+                    placeholder="enter your email" onChange={(e)=>setemail(e.target.value)}className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none focus:border-pink-500"/>
                 </div>
                 <div className="mb-6">
                     <label className="mb-2 block font-medium text-gray-700">password</label>
@@ -36,4 +36,4 @@ type="submit">login</button>
         </div>
     )
 }
-export default Login
+export default Login;
