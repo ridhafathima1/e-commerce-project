@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div className="min-h-screen bg-pink-50">
-
-      {/* Navbar */}
+      
       <nav className="flex items-center justify-between bg-white px-8 py-5 shadow-sm">
         <div>
           <h1 className="text-3xl font-bold text-pink-600">
@@ -48,7 +47,7 @@ function Home() {
         </p>
 
         <Link to="/products">
-          <button className="mt-8 rounded-lg bg-pink-600 px-8 py-3 font-semibold text-white hover:bg-pink-700">
+          <button className="mt-8 inline-block rounded-lg bg-pink-600 px-8 py-3 font-semibold text-white hover:bg-pink-700">
             Shop RIFAYA
           </button>
         </Link>

@@ -1,7 +1,15 @@
 {
+  "users": [
+    {
+      "name": "ridha",
+      "email": "ridha@gmail.com",
+      "password": "123456",
+      "id": "9ul9bY6x2qQ"
+    }
+  ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Hydrating Face Wash",
       "category": "Skincare",
       "price": 349,
@@ -10,7 +18,7 @@
       "image": "https://placehold.co/600x600?text=Hydrating+Face+Wash"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Vitamin C Serum",
       "category": "Skincare",
       "price": 499,
@@ -19,7 +27,7 @@
       "image": "https://placehold.co/600x600?text=Vitamin+C+Serum"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Hyaluronic Acid Serum",
       "category": "Skincare",
       "price": 699,
@@ -28,7 +36,7 @@
       "image": "https://placehold.co/600x600?text=Hyaluronic+Acid+Serum"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Aloe Vera Gel",
       "category": "Skincare",
       "price": 399,
@@ -37,7 +45,7 @@
       "image": "https://placehold.co/600x600?text=Aloe+Vera+Gel"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Daily Moisturizer",
       "category": "Skincare",
       "price": 549,
@@ -46,7 +54,7 @@
       "image": "https://placehold.co/600x600?text=Daily+Moisturizer"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Clay Face Mask",
       "category": "Skincare",
       "price": 299,
@@ -55,7 +63,7 @@
       "image": "https://placehold.co/600x600?text=Clay+Face+Mask"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Rose Water Toner",
       "category": "Skincare",
       "price": 449,
@@ -64,7 +72,7 @@
       "image": "https://placehold.co/600x600?text=Rose+Water+Toner"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Gentle Face Scrub",
       "category": "Skincare",
       "price": 379,
@@ -73,7 +81,7 @@
       "image": "https://placehold.co/600x600?text=Gentle+Face+Scrub"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Overnight Hydration Mask",
       "category": "Skincare",
       "price": 599,
@@ -82,7 +90,7 @@
       "image": "https://placehold.co/600x600?text=Overnight+Hydration+Mask"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Gel Moisturizer",
       "category": "Skincare",
       "price": 429,
@@ -91,7 +99,7 @@
       "image": "https://placehold.co/600x600?text=Gel+Moisturizer"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Micellar Water",
       "category": "Skincare",
       "price": 349,
@@ -100,7 +108,7 @@
       "image": "https://placehold.co/600x600?text=Micellar+Water"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Niacinamide Serum",
       "category": "Skincare",
       "price": 499,
@@ -109,7 +117,7 @@
       "image": "https://placehold.co/600x600?text=Niacinamide+Serum"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Green Tea Toner",
       "category": "Skincare",
       "price": 699,
@@ -118,7 +126,7 @@
       "image": "https://placehold.co/600x600?text=Green+Tea+Toner"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Cica Soothing Cream",
       "category": "Skincare",
       "price": 399,
@@ -127,7 +135,7 @@
       "image": "https://placehold.co/600x600?text=Cica+Soothing+Cream"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Rice Water Cleanser",
       "category": "Skincare",
       "price": 549,
@@ -136,7 +144,7 @@
       "image": "https://placehold.co/600x600?text=Rice+Water+Cleanser"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Ceramide Moisturizer",
       "category": "Skincare",
       "price": 299,
@@ -145,7 +153,7 @@
       "image": "https://placehold.co/600x600?text=Ceramide+Moisturizer"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Peptide Face Serum",
       "category": "Skincare",
       "price": 449,
@@ -154,7 +162,7 @@
       "image": "https://placehold.co/600x600?text=Peptide+Face+Serum"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Brightening Essence",
       "category": "Skincare",
       "price": 379,
@@ -163,7 +171,7 @@
       "image": "https://placehold.co/600x600?text=Brightening+Essence"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Facial Cleansing Foam",
       "category": "Skincare",
       "price": 599,
@@ -172,7 +180,7 @@
       "image": "https://placehold.co/600x600?text=Facial+Cleansing+Foam"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Daily Face Mist",
       "category": "Skincare",
       "price": 429,
@@ -181,7 +189,7 @@
       "image": "https://placehold.co/600x600?text=Daily+Face+Mist"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Tea Tree Spot Gel",
       "category": "Skincare",
       "price": 349,
@@ -190,7 +198,7 @@
       "image": "https://placehold.co/600x600?text=Tea+Tree+Spot+Gel"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Squalane Moisturizer",
       "category": "Skincare",
       "price": 499,
@@ -199,7 +207,7 @@
       "image": "https://placehold.co/600x600?text=Squalane+Moisturizer"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Oatmeal Cleanser",
       "category": "Skincare",
       "price": 699,
@@ -208,7 +216,7 @@
       "image": "https://placehold.co/600x600?text=Oatmeal+Cleanser"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Charcoal Face Mask",
       "category": "Skincare",
       "price": 399,
@@ -217,7 +225,7 @@
       "image": "https://placehold.co/600x600?text=Charcoal+Face+Mask"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Bakuchiol Serum",
       "category": "Skincare",
       "price": 549,
@@ -226,7 +234,7 @@
       "image": "https://placehold.co/600x600?text=Bakuchiol+Serum"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Under Eye Gel",
       "category": "Skincare",
       "price": 299,
@@ -235,7 +243,7 @@
       "image": "https://placehold.co/600x600?text=Under+Eye+Gel"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Vitamin E Cream",
       "category": "Skincare",
       "price": 449,
@@ -244,7 +252,7 @@
       "image": "https://placehold.co/600x600?text=Vitamin+E+Cream"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Pore Refining Toner",
       "category": "Skincare",
       "price": 379,
@@ -253,7 +261,7 @@
       "image": "https://placehold.co/600x600?text=Pore+Refining+Toner"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "AHA Exfoliating Serum",
       "category": "Skincare",
       "price": 599,
@@ -262,7 +270,7 @@
       "image": "https://placehold.co/600x600?text=AHA+Exfoliating+Serum"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Shea Face Cream",
       "category": "Skincare",
       "price": 429,
@@ -271,7 +279,7 @@
       "image": "https://placehold.co/600x600?text=Shea+Face+Cream"
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Smooth Shine Shampoo",
       "category": "Haircare",
       "price": 349,
@@ -280,7 +288,7 @@
       "image": "https://placehold.co/600x600?text=Smooth+Shine+Shampoo"
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Nourishing Conditioner",
       "category": "Haircare",
       "price": 499,
@@ -289,7 +297,7 @@
       "image": "https://placehold.co/600x600?text=Nourishing+Conditioner"
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Coconut Hair Oil",
       "category": "Haircare",
       "price": 699,
@@ -298,7 +306,7 @@
       "image": "https://placehold.co/600x600?text=Coconut+Hair+Oil"
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Argan Hair Serum",
       "category": "Haircare",
       "price": 399,
@@ -307,7 +315,7 @@
       "image": "https://placehold.co/600x600?text=Argan+Hair+Serum"
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Keratin Hair Mask",
       "category": "Haircare",
       "price": 549,
@@ -316,7 +324,7 @@
       "image": "https://placehold.co/600x600?text=Keratin+Hair+Mask"
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Aloe Scalp Gel",
       "category": "Haircare",
       "price": 299,
@@ -325,7 +333,7 @@
       "image": "https://placehold.co/600x600?text=Aloe+Scalp+Gel"
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "Anti Frizz Hair Cream",
       "category": "Haircare",
       "price": 449,
@@ -334,7 +342,7 @@
       "image": "https://placehold.co/600x600?text=Anti+Frizz+Hair+Cream"
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "Volumizing Shampoo",
       "category": "Haircare",
       "price": 379,
@@ -343,7 +351,7 @@
       "image": "https://placehold.co/600x600?text=Volumizing+Shampoo"
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Repair Conditioner",
       "category": "Haircare",
       "price": 599,
@@ -352,7 +360,7 @@
       "image": "https://placehold.co/600x600?text=Repair+Conditioner"
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Rosemary Hair Oil",
       "category": "Haircare",
       "price": 429,
@@ -361,7 +369,7 @@
       "image": "https://placehold.co/600x600?text=Rosemary+Hair+Oil"
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Leave In Conditioner",
       "category": "Haircare",
       "price": 349,
@@ -370,7 +378,7 @@
       "image": "https://placehold.co/600x600?text=Leave+In+Conditioner"
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "Scalp Refresh Shampoo",
       "category": "Haircare",
       "price": 499,
@@ -379,7 +387,7 @@
       "image": "https://placehold.co/600x600?text=Scalp+Refresh+Shampoo"
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "Silk Hair Wrap",
       "category": "Haircare",
       "price": 699,
@@ -388,7 +396,7 @@
       "image": "https://placehold.co/600x600?text=Silk+Hair+Wrap"
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "Wide Tooth Hair Comb",
       "category": "Haircare",
       "price": 399,
@@ -397,7 +405,7 @@
       "image": "https://placehold.co/600x600?text=Wide+Tooth+Hair+Comb"
     },
     {
-      "id": 45,
+      "id": "45",
       "name": "Hair Styling Brush",
       "category": "Haircare",
       "price": 549,
@@ -406,7 +414,7 @@
       "image": "https://placehold.co/600x600?text=Hair+Styling+Brush"
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "Curl Defining Cream",
       "category": "Haircare",
       "price": 299,
@@ -415,7 +423,7 @@
       "image": "https://placehold.co/600x600?text=Curl+Defining+Cream"
     },
     {
-      "id": 47,
+      "id": "47",
       "name": "Hair Growth Care Oil",
       "category": "Haircare",
       "price": 449,
@@ -424,7 +432,7 @@
       "image": "https://placehold.co/600x600?text=Hair+Growth+Care+Oil"
     },
     {
-      "id": 48,
+      "id": "48",
       "name": "Dry Hair Mask",
       "category": "Haircare",
       "price": 379,
@@ -433,7 +441,7 @@
       "image": "https://placehold.co/600x600?text=Dry+Hair+Mask"
     },
     {
-      "id": 49,
+      "id": "49",
       "name": "Scalp Scrub",
       "category": "Haircare",
       "price": 599,
@@ -442,7 +450,7 @@
       "image": "https://placehold.co/600x600?text=Scalp+Scrub"
     },
     {
-      "id": 50,
+      "id": "50",
       "name": "Clarifying Shampoo",
       "category": "Haircare",
       "price": 429,
@@ -451,7 +459,7 @@
       "image": "https://placehold.co/600x600?text=Clarifying+Shampoo"
     },
     {
-      "id": 51,
+      "id": "51",
       "name": "Moisture Repair Shampoo",
       "category": "Haircare",
       "price": 349,
@@ -460,7 +468,7 @@
       "image": "https://placehold.co/600x600?text=Moisture+Repair+Shampoo"
     },
     {
-      "id": 52,
+      "id": "52",
       "name": "Strengthening Hair Serum",
       "category": "Haircare",
       "price": 499,
@@ -469,7 +477,7 @@
       "image": "https://placehold.co/600x600?text=Strengthening+Hair+Serum"
     },
     {
-      "id": 53,
+      "id": "53",
       "name": "Heat Protect Hair Spray",
       "category": "Haircare",
       "price": 699,
@@ -478,7 +486,7 @@
       "image": "https://placehold.co/600x600?text=Heat+Protect+Hair+Spray"
     },
     {
-      "id": 54,
+      "id": "54",
       "name": "Curl Care Conditioner",
       "category": "Haircare",
       "price": 399,
@@ -487,7 +495,7 @@
       "image": "https://placehold.co/600x600?text=Curl+Care+Conditioner"
     },
     {
-      "id": 55,
+      "id": "55",
       "name": "Hair Detangling Spray",
       "category": "Haircare",
       "price": 549,
@@ -496,7 +504,7 @@
       "image": "https://placehold.co/600x600?text=Hair+Detangling+Spray"
     },
     {
-      "id": 56,
+      "id": "56",
       "name": "Smooth Hair Mask",
       "category": "Haircare",
       "price": 299,
@@ -505,7 +513,7 @@
       "image": "https://placehold.co/600x600?text=Smooth+Hair+Mask"
     },
     {
-      "id": 57,
+      "id": "57",
       "name": "Daily Hair Tonic",
       "category": "Haircare",
       "price": 449,
@@ -514,7 +522,7 @@
       "image": "https://placehold.co/600x600?text=Daily+Hair+Tonic"
     },
     {
-      "id": 58,
+      "id": "58",
       "name": "Avocado Hair Mask",
       "category": "Haircare",
       "price": 379,
@@ -523,7 +531,7 @@
       "image": "https://placehold.co/600x600?text=Avocado+Hair+Mask"
     },
     {
-      "id": 59,
+      "id": "59",
       "name": "Jojoba Hair Oil",
       "category": "Haircare",
       "price": 599,
@@ -532,7 +540,7 @@
       "image": "https://placehold.co/600x600?text=Jojoba+Hair+Oil"
     },
     {
-      "id": 60,
+      "id": "60",
       "name": "Protein Hair Treatment",
       "category": "Haircare",
       "price": 429,
@@ -541,7 +549,7 @@
       "image": "https://placehold.co/600x600?text=Protein+Hair+Treatment"
     },
     {
-      "id": 61,
+      "id": "61",
       "name": "Nude Everyday Lipstick",
       "category": "Makeup",
       "price": 349,
@@ -550,7 +558,7 @@
       "image": "https://placehold.co/600x600?text=Nude+Everyday+Lipstick"
     },
     {
-      "id": 62,
+      "id": "62",
       "name": "Rose Pink Lip Gloss",
       "category": "Makeup",
       "price": 499,
@@ -559,7 +567,7 @@
       "image": "https://placehold.co/600x600?text=Rose+Pink+Lip+Gloss"
     },
     {
-      "id": 63,
+      "id": "63",
       "name": "Liquid Eyeliner",
       "category": "Makeup",
       "price": 699,
@@ -568,7 +576,7 @@
       "image": "https://placehold.co/600x600?text=Liquid+Eyeliner"
     },
     {
-      "id": 64,
+      "id": "64",
       "name": "Lengthening Mascara",
       "category": "Makeup",
       "price": 399,
@@ -577,7 +585,7 @@
       "image": "https://placehold.co/600x600?text=Lengthening+Mascara"
     },
     {
-      "id": 65,
+      "id": "65",
       "name": "Soft Glow Blush",
       "category": "Makeup",
       "price": 549,
@@ -586,7 +594,7 @@
       "image": "https://placehold.co/600x600?text=Soft+Glow+Blush"
     },
     {
-      "id": 66,
+      "id": "66",
       "name": "Compact Face Powder",
       "category": "Makeup",
       "price": 299,
@@ -595,7 +603,7 @@
       "image": "https://placehold.co/600x600?text=Compact+Face+Powder"
     },
     {
-      "id": 67,
+      "id": "67",
       "name": "Natural Brow Pencil",
       "category": "Makeup",
       "price": 449,
@@ -604,7 +612,7 @@
       "image": "https://placehold.co/600x600?text=Natural+Brow+Pencil"
     },
     {
-      "id": 68,
+      "id": "68",
       "name": "Eyeshadow Mini Palette",
       "category": "Makeup",
       "price": 379,
@@ -613,7 +621,7 @@
       "image": "https://placehold.co/600x600?text=Eyeshadow+Mini+Palette"
     },
     {
-      "id": 69,
+      "id": "69",
       "name": "Makeup Setting Spray",
       "category": "Makeup",
       "price": 599,
@@ -622,7 +630,7 @@
       "image": "https://placehold.co/600x600?text=Makeup+Setting+Spray"
     },
     {
-      "id": 70,
+      "id": "70",
       "name": "Cream Concealer",
       "category": "Makeup",
       "price": 429,
@@ -631,7 +639,7 @@
       "image": "https://placehold.co/600x600?text=Cream+Concealer"
     },
     {
-      "id": 71,
+      "id": "71",
       "name": "Liquid Foundation",
       "category": "Makeup",
       "price": 349,
@@ -640,7 +648,7 @@
       "image": "https://placehold.co/600x600?text=Liquid+Foundation"
     },
     {
-      "id": 72,
+      "id": "72",
       "name": "BB Cream",
       "category": "Makeup",
       "price": 499,
@@ -649,7 +657,7 @@
       "image": "https://placehold.co/600x600?text=BB+Cream"
     },
     {
-      "id": 73,
+      "id": "73",
       "name": "Cream Blush",
       "category": "Makeup",
       "price": 699,
@@ -658,7 +666,7 @@
       "image": "https://placehold.co/600x600?text=Cream+Blush"
     },
     {
-      "id": 74,
+      "id": "74",
       "name": "Highlighter Stick",
       "category": "Makeup",
       "price": 399,
@@ -667,7 +675,7 @@
       "image": "https://placehold.co/600x600?text=Highlighter+Stick"
     },
     {
-      "id": 75,
+      "id": "75",
       "name": "Contour Palette",
       "category": "Makeup",
       "price": 549,
@@ -676,7 +684,7 @@
       "image": "https://placehold.co/600x600?text=Contour+Palette"
     },
     {
-      "id": 76,
+      "id": "76",
       "name": "Matte Lip Color",
       "category": "Makeup",
       "price": 299,
@@ -685,7 +693,7 @@
       "image": "https://placehold.co/600x600?text=Matte+Lip+Color"
     },
     {
-      "id": 77,
+      "id": "77",
       "name": "Lip Liner",
       "category": "Makeup",
       "price": 449,
@@ -694,7 +702,7 @@
       "image": "https://placehold.co/600x600?text=Lip+Liner"
     },
     {
-      "id": 78,
+      "id": "78",
       "name": "Kajal Pencil",
       "category": "Makeup",
       "price": 379,
@@ -703,7 +711,7 @@
       "image": "https://placehold.co/600x600?text=Kajal+Pencil"
     },
     {
-      "id": 79,
+      "id": "79",
       "name": "Waterproof Mascara",
       "category": "Makeup",
       "price": 599,
@@ -712,7 +720,7 @@
       "image": "https://placehold.co/600x600?text=Waterproof+Mascara"
     },
     {
-      "id": 80,
+      "id": "80",
       "name": "Makeup Primer",
       "category": "Makeup",
       "price": 429,
@@ -721,7 +729,7 @@
       "image": "https://placehold.co/600x600?text=Makeup+Primer"
     },
     {
-      "id": 81,
+      "id": "81",
       "name": "Hydrating Body Lotion",
       "category": "Body Care",
       "price": 349,
@@ -730,7 +738,7 @@
       "image": "https://placehold.co/600x600?text=Hydrating+Body+Lotion"
     },
     {
-      "id": 82,
+      "id": "82",
       "name": "Shea Butter Body Cream",
       "category": "Body Care",
       "price": 499,
@@ -739,7 +747,7 @@
       "image": "https://placehold.co/600x600?text=Shea+Butter+Body+Cream"
     },
     {
-      "id": 83,
+      "id": "83",
       "name": "Vanilla Body Scrub",
       "category": "Body Care",
       "price": 699,
@@ -748,7 +756,7 @@
       "image": "https://placehold.co/600x600?text=Vanilla+Body+Scrub"
     },
     {
-      "id": 84,
+      "id": "84",
       "name": "Lavender Shower Gel",
       "category": "Body Care",
       "price": 399,
@@ -757,7 +765,7 @@
       "image": "https://placehold.co/600x600?text=Lavender+Shower+Gel"
     },
     {
-      "id": 85,
+      "id": "85",
       "name": "Coffee Body Scrub",
       "category": "Body Care",
       "price": 549,
@@ -766,7 +774,7 @@
       "image": "https://placehold.co/600x600?text=Coffee+Body+Scrub"
     },
     {
-      "id": 86,
+      "id": "86",
       "name": "Hand Body Cream",
       "category": "Body Care",
       "price": 299,
@@ -775,7 +783,7 @@
       "image": "https://placehold.co/600x600?text=Hand+Body+Cream"
     },
     {
-      "id": 87,
+      "id": "87",
       "name": "Coconut Body Wash",
       "category": "Body Care",
       "price": 449,
@@ -784,7 +792,7 @@
       "image": "https://placehold.co/600x600?text=Coconut+Body+Wash"
     },
     {
-      "id": 88,
+      "id": "88",
       "name": "Rose Body Mist",
       "category": "Body Care",
       "price": 379,
@@ -793,7 +801,7 @@
       "image": "https://placehold.co/600x600?text=Rose+Body+Mist"
     },
     {
-      "id": 89,
+      "id": "89",
       "name": "Aloe Hand Cream",
       "category": "Body Care",
       "price": 599,
@@ -802,7 +810,7 @@
       "image": "https://placehold.co/600x600?text=Aloe+Hand+Cream"
     },
     {
-      "id": 90,
+      "id": "90",
       "name": "Cocoa Body Lotion",
       "category": "Body Care",
       "price": 429,
@@ -811,7 +819,7 @@
       "image": "https://placehold.co/600x600?text=Cocoa+Body+Lotion"
     },
     {
-      "id": 91,
+      "id": "91",
       "name": "Body Butter",
       "category": "Body Care",
       "price": 349,
@@ -820,7 +828,7 @@
       "image": "https://placehold.co/600x600?text=Body+Butter"
     },
     {
-      "id": 92,
+      "id": "92",
       "name": "Exfoliating Body Wash",
       "category": "Body Care",
       "price": 499,
@@ -829,7 +837,7 @@
       "image": "https://placehold.co/600x600?text=Exfoliating+Body+Wash"
     },
     {
-      "id": 93,
+      "id": "93",
       "name": "Fresh Citrus Body Wash",
       "category": "Body Care",
       "price": 699,
@@ -838,7 +846,7 @@
       "image": "https://placehold.co/600x600?text=Fresh+Citrus+Body+Wash"
     },
     {
-      "id": 94,
+      "id": "94",
       "name": "Foot Cream",
       "category": "Body Care",
       "price": 399,
@@ -847,7 +855,7 @@
       "image": "https://placehold.co/600x600?text=Foot+Cream"
     },
     {
-      "id": 95,
+      "id": "95",
       "name": "Body Polishing Scrub",
       "category": "Body Care",
       "price": 549,
@@ -856,7 +864,7 @@
       "image": "https://placehold.co/600x600?text=Body+Polishing+Scrub"
     },
     {
-      "id": 96,
+      "id": "96",
       "name": "Rose Eau De Parfum",
       "category": "Fragrance",
       "price": 299,
@@ -865,7 +873,7 @@
       "image": "https://placehold.co/600x600?text=Rose+Eau+De+Parfum"
     },
     {
-      "id": 97,
+      "id": "97",
       "name": "Vanilla Body Fragrance",
       "category": "Fragrance",
       "price": 449,
@@ -874,7 +882,7 @@
       "image": "https://placehold.co/600x600?text=Vanilla+Body+Fragrance"
     },
     {
-      "id": 98,
+      "id": "98",
       "name": "Jasmine Mist",
       "category": "Fragrance",
       "price": 379,
@@ -883,7 +891,7 @@
       "image": "https://placehold.co/600x600?text=Jasmine+Mist"
     },
     {
-      "id": 99,
+      "id": "99",
       "name": "Citrus Fresh Body Mist",
       "category": "Fragrance",
       "price": 599,
@@ -892,7 +900,7 @@
       "image": "https://placehold.co/600x600?text=Citrus+Fresh+Body+Mist"
     },
     {
-      "id": 100,
+      "id": "100",
       "name": "Floral Perfume Spray",
       "category": "Fragrance",
       "price": 429,
@@ -901,7 +909,7 @@
       "image": "https://placehold.co/600x600?text=Floral+Perfume+Spray"
     },
     {
-      "id": 101,
+      "id": "101",
       "name": "Musk Eau De Parfum",
       "category": "Fragrance",
       "price": 349,
@@ -910,7 +918,7 @@
       "image": "https://placehold.co/600x600?text=Musk+Eau+De+Parfum"
     },
     {
-      "id": 102,
+      "id": "102",
       "name": "Berry Fragrance Mist",
       "category": "Fragrance",
       "price": 499,
@@ -919,7 +927,7 @@
       "image": "https://placehold.co/600x600?text=Berry+Fragrance+Mist"
     },
     {
-      "id": 103,
+      "id": "103",
       "name": "Sandalwood Perfume",
       "category": "Fragrance",
       "price": 699,
@@ -928,7 +936,7 @@
       "image": "https://placehold.co/600x600?text=Sandalwood+Perfume"
     },
     {
-      "id": 104,
+      "id": "104",
       "name": "Fresh Ocean Body Mist",
       "category": "Fragrance",
       "price": 399,
@@ -937,7 +945,7 @@
       "image": "https://placehold.co/600x600?text=Fresh+Ocean+Body+Mist"
     },
     {
-      "id": 105,
+      "id": "105",
       "name": "Lavender Eau De Toilette",
       "category": "Fragrance",
       "price": 549,
@@ -946,7 +954,7 @@
       "image": "https://placehold.co/600x600?text=Lavender+Eau+De+Toilette"
     },
     {
-      "id": 106,
+      "id": "106",
       "name": "Silicone Face Cleansing Brush",
       "category": "Beauty Tools",
       "price": 299,
@@ -955,7 +963,7 @@
       "image": "https://placehold.co/600x600?text=Silicone+Face+Cleansing+Brush"
     },
     {
-      "id": 107,
+      "id": "107",
       "name": "Makeup Sponge Set",
       "category": "Beauty Tools",
       "price": 449,
@@ -964,7 +972,7 @@
       "image": "https://placehold.co/600x600?text=Makeup+Sponge+Set"
     },
     {
-      "id": 108,
+      "id": "108",
       "name": "Professional Makeup Brush Set",
       "category": "Beauty Tools",
       "price": 379,
@@ -973,7 +981,7 @@
       "image": "https://placehold.co/600x600?text=Professional+Makeup+Brush+Set"
     },
     {
-      "id": 109,
+      "id": "109",
       "name": "Hair Sectioning Clips",
       "category": "Beauty Tools",
       "price": 599,
@@ -982,7 +990,7 @@
       "image": "https://placehold.co/600x600?text=Hair+Sectioning+Clips"
     },
     {
-      "id": 110,
+      "id": "110",
       "name": "Portable Beauty Mirror",
       "category": "Beauty Tools",
       "price": 429,
@@ -991,7 +999,7 @@
       "image": "https://placehold.co/600x600?text=Portable+Beauty+Mirror"
     },
     {
-      "id": 111,
+      "id": "111",
       "name": "Jade Facial Roller",
       "category": "Beauty Tools",
       "price": 349,
@@ -1000,7 +1008,7 @@
       "image": "https://placehold.co/600x600?text=Jade+Facial+Roller"
     },
     {
-      "id": 112,
+      "id": "112",
       "name": "Facial Gua Sha Tool",
       "category": "Beauty Tools",
       "price": 499,
@@ -1009,7 +1017,7 @@
       "image": "https://placehold.co/600x600?text=Facial+Gua+Sha+Tool"
     },
     {
-      "id": 113,
+      "id": "113",
       "name": "Eyelash Curler",
       "category": "Beauty Tools",
       "price": 699,
@@ -1018,7 +1026,7 @@
       "image": "https://placehold.co/600x600?text=Eyelash+Curler"
     },
     {
-      "id": 114,
+      "id": "114",
       "name": "Makeup Brush Cleaner",
       "category": "Beauty Tools",
       "price": 399,
@@ -1027,7 +1035,7 @@
       "image": "https://placehold.co/600x600?text=Makeup+Brush+Cleaner"
     },
     {
-      "id": 115,
+      "id": "115",
       "name": "Scalp Massage Brush",
       "category": "Beauty Tools",
       "price": 549,
@@ -1036,7 +1044,7 @@
       "image": "https://placehold.co/600x600?text=Scalp+Massage+Brush"
     },
     {
-      "id": 116,
+      "id": "116",
       "name": "Vanilla Lip Balm",
       "category": "Lip Care",
       "price": 299,
@@ -1045,7 +1053,7 @@
       "image": "https://placehold.co/600x600?text=Vanilla+Lip+Balm"
     },
     {
-      "id": 117,
+      "id": "117",
       "name": "Berry Lip Balm",
       "category": "Lip Care",
       "price": 449,
@@ -1054,7 +1062,7 @@
       "image": "https://placehold.co/600x600?text=Berry+Lip+Balm"
     },
     {
-      "id": 118,
+      "id": "118",
       "name": "Honey Lip Mask",
       "category": "Lip Care",
       "price": 379,
@@ -1063,7 +1071,7 @@
       "image": "https://placehold.co/600x600?text=Honey+Lip+Mask"
     },
     {
-      "id": 119,
+      "id": "119",
       "name": "Tinted Lip Balm",
       "category": "Lip Care",
       "price": 599,
@@ -1072,7 +1080,7 @@
       "image": "https://placehold.co/600x600?text=Tinted+Lip+Balm"
     },
     {
-      "id": 120,
+      "id": "120",
       "name": "Coconut Lip Scrub",
       "category": "Lip Care",
       "price": 429,
@@ -1081,6 +1089,6 @@
       "image": "https://placehold.co/600x600?text=Coconut+Lip+Scrub"
     }
   ],
-  "users": [],
-  "orders": []
+  "orders": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }

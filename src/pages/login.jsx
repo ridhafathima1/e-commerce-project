@@ -1,10 +1,28 @@
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
 import {useState} from "react"
+import axios from "axios"
+
 function Login(){
     const[email,setemail]=useState("")
     const[password,setpassword]=useState("")
-    const handlelogin=(e)=>{
+    const navigate=useNavigate();
+    const handlelogin=async (e)=>{
         e.preventDefault();
+        try{
+            const response=await axios.get("http://localhost:3000/users")
+            const users=response.data;
+            const user=users.find((item)=>item.email===email&&item.password===password);
+            if(user){
+                alert("login successfull!")
+                navigate("/home")
+            }else{
+                alert("invalid email or password")
+            }
+        }catch(error){
+            console.log(error);
+            alert("login failed")
+        }
+    
         console.log("email:",email)
         console.log("password:",password)
     }
@@ -12,7 +30,7 @@ function Login(){
         <div className="flex min-h-screen items-center justify-center bg-pink-50 px-4">
             <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-lg">
             <h1 className="text-center text-4xl font-bold text-pink-600">
-                 GLORA
+                 GLORIA
             </h1>
             <p  className="mt-2 text-center text-sm text-gray-500">RIFAYA Beauty</p>
             <h2 className="mt-1 text-gray-500">
