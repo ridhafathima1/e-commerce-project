@@ -3,7 +3,7 @@ import Login from "./pages/login"
 import Home from "./pages/home"
 import Register from "./pages/register"
 import Products from "./pages/products"
-import Productdetails from ".pages/productdetails"
+import Productdetails from "./pages/productdetails"
 function App(){
   return (
     <BrowserRouter>
