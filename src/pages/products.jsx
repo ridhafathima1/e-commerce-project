@@ -56,7 +56,7 @@ function Products() {
   return (
     <div className="min-h-screen bg-pink-50">
 
-      {/* Navbar */}
+      
       <nav className="sticky top-0 z-10 flex items-center justify-between bg-white px-6 py-4 shadow-sm md:px-10">
 
         <Link to="/home">
@@ -93,11 +93,11 @@ function Products() {
         </div>
 
         <button className="rounded-full bg-pink-100 px-4 py-2 text-pink-600">
-          🛍️ Bag
+           Bag
         </button>
       </nav>
 
-      {/* Heading */}
+      
       <section className="px-6 py-12 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-pink-500">
           RIFAYA Beauty
@@ -113,12 +113,11 @@ function Products() {
         </p>
       </section>
 
-      {/* Search + Category */}
+    
       <section className="mx-auto max-w-7xl px-6">
 
         <div className="flex flex-col gap-4 rounded-2xl bg-white p-5 shadow-sm md:flex-row md:items-center md:justify-between">
 
-          {/* Search */}
           <input
             type="text"
             placeholder="Search products..."
@@ -126,8 +125,6 @@ function Products() {
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-pink-500 md:w-80"
           />
-
-          {/* Categories */}
           <div className="flex flex-wrap gap-2">
             {categories.map((item) => (
               <button
@@ -147,14 +144,14 @@ function Products() {
         </div>
       </section>
 
-      {/* Product count */}
+      
       <div className="mx-auto mt-10 max-w-7xl px-6">
         <p className="text-sm text-gray-500">
           Showing {filteredProducts.length} products
         </p>
       </div>
 
-      {/* Products */}
+      
       <main className="mx-auto max-w-7xl px-6 py-6">
 
         {filteredProducts.length === 0 ? (
@@ -171,8 +168,6 @@ function Products() {
                 key={product.id}
                 className="group overflow-hidden rounded-2xl bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-
-                {/* Image */}
                 <div className="relative overflow-hidden bg-pink-50">
 
                   <img
@@ -186,8 +181,6 @@ function Products() {
                   </button>
 
                 </div>
-
-                {/* Product information */}
                 <div className="p-5">
 
                   <p className="text-xs font-medium uppercase tracking-wider text-pink-500">
