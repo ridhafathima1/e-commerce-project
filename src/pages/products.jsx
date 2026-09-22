@@ -92,10 +92,12 @@ function Products() {
 
           <Link to="/register" >Sign Up</Link>
         </div>
-
-        <button onClick={()=>dispatch(addtocart(product))} className="rounded-full bg-pink-100 px-4 py-2 text-pink-600">
-           Bag
-        </button>
+<Link
+  to="/cart"
+  className="rounded-full bg-pink-100 px-4 py-2 text-pink-600"
+>
+  Bag
+</Link>
       </nav>
 
       
@@ -213,10 +215,10 @@ function Products() {
 
                   </div>
 
-                  <Link to={`/products/${product.id}`}>
-                    <button className="mt-5 w-full rounded-xl bg-pink-600 py-3 font-semibold text-white transition hover:bg-pink-700">
+                  <Link to={`/products/${product.id}`}
+                     className="mt-5 w-full rounded-xl bg-pink-600 py-3 font-semibold text-white transition hover:bg-pink-700">
                       View Details
-                    </button>
+                    
                   </Link>
 
                 </div>

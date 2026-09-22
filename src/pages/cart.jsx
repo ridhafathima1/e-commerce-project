@@ -34,7 +34,6 @@ function Cart(){
           <div>
             {cartitems.map((item) => (
               <div
-                key={item.id}
                 className="mb-4 flex items-center gap-6 rounded-lg bg-white p-5 shadow"
               >
                 <img

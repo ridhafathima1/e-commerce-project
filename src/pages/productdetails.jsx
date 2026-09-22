@@ -2,10 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
+import { ShoppingBag } from "lucide-react";
+import { useDispatch } from "react-redux"
+import { addtocart } from "../redux/cart"
 
 function Productdetails() {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
+  const dispatch=useDispatch();
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["product", id],
@@ -16,7 +20,7 @@ function Productdetails() {
         )
         .then((res) => {
           const product = res.data.products.find(
-            (item) => item.id === Number(id)
+            (item) => item.id === String(id)
           );
 
           return product;
@@ -74,9 +78,7 @@ function Productdetails() {
               ♡ Wishlist
             </span>
 
-            <span className="cursor-pointer hover:text-pink-600">
-              🛍 Bag
-            </span>
+          <Link to="/cart">Bag</Link>
           </div>
 
         </div>
@@ -207,6 +209,7 @@ function Productdetails() {
 
             
             <button
+            onClick={()=>dispatch(addtocart(data))}
               className="mt-8 w-full rounded-xl bg-pink-600 py-4 text-lg font-semibold text-white transition hover:bg-pink-700"
             >
               Add to Bag

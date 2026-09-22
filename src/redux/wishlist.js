@@ -7,7 +7,7 @@ const wishlistslice=createSlice({
     reducers:{
         togglewishlist:(state,action)=>{
             const exists=state.items.find((item)=>item.id===action.payload.id)
-            if(!exists){
+            if(exists){
                 state.items=state.items.filter((item)=>item.id!==action.payload.id)
             }else{
                 state.items.push(action.payload)
