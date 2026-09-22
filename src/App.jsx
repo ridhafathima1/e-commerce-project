@@ -13,7 +13,7 @@ function App(){
       <Route path="/register" element={<Register/>}/>
       <Route path="/home" element={<Home/>}/>
       <Route path="/products" element={<Products/>}/>
-      <Route path="/productdetails" element={<Productdetails/>}/>
+      <Route path="/products/:id" element={<Productdetails/>}/>
       </Routes></BrowserRouter>
   )
 }

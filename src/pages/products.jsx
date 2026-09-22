@@ -2,10 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useSelector,useDispatch } from "react-redux"
+import { togglewishlist } from "../redux/wishlist"
+import { Heart } from "lucide-react"
 
 function Products() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
+  const dispatch=useDispatch();
+  const wishlist=useSelector((state)=>state.wishlist.items)
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["products"],
@@ -52,6 +57,7 @@ function Products() {
 
     return matchesSearch && matchesCategory;
   });
+  
 
   return (
     <div className="min-h-screen bg-pink-50">
@@ -84,12 +90,7 @@ function Products() {
             Products
           </Link>
 
-          <Link
-            to="/login"
-            className="text-gray-700 hover:text-pink-600"
-          >
-            Login
-          </Link>
+          <Link to="/register" >Sign Up</Link>
         </div>
 
         <button className="rounded-full bg-pink-100 px-4 py-2 text-pink-600">
@@ -125,6 +126,7 @@ function Products() {
             onChange={(e) => setSearch(e.target.value)}
             className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-pink-500 md:w-80"
           />
+          <p>searching:{search}</p>
           <div className="flex flex-wrap gap-2">
             {categories.map((item) => (
               <button
@@ -147,7 +149,7 @@ function Products() {
       
       <div className="mx-auto mt-10 max-w-7xl px-6">
         <p className="text-sm text-gray-500">
-          Showing {filteredProducts.length} products
+        {filteredProducts.length} products found
         </p>
       </div>
 
@@ -159,11 +161,16 @@ function Products() {
             <p className="text-lg text-gray-500">
               No products found.
             </p>
+              <p className="mt-2 text-gray-500">
+              Try searching for another product.
+            </p>
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-            {filteredProducts.map((product) => (
+            {filteredProducts.map((product) => {
+              const iswishlisted=wishlist.some((item)=>item.id===product.id);
+              return(
               <div
                 key={product.id}
                 className="group overflow-hidden rounded-2xl bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -176,8 +183,11 @@ function Products() {
                     className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
                   />
 
-                  <button className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg shadow-md hover:bg-pink-100">
-                    ♡
+                  <button 
+                    onClick={()=>dispatch(togglewishlist(product))} 
+                    className={`absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg shadow-md hover:bg-pink-100 ${
+                      iswishlisted?"text-pink-600":"text-gray-500"
+                    }`}><Heart size={22} fill={iswishlisted?"currentcolor":"none"}/>
                   </button>
 
                 </div>
@@ -198,7 +208,7 @@ function Products() {
                     </p>
 
                     <span className="text-sm text-yellow-500">
-                      ★ 4.8
+                      ★{product.rating||"4.5"}
                     </span>
 
                   </div>
@@ -211,7 +221,8 @@ function Products() {
 
                 </div>
               </div>
-            ))}
+              )
+})}
 
           </div>
         )}

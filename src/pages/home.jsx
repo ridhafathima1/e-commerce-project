@@ -29,7 +29,7 @@ function Home() {
         </div>
       </nav>
 
-      {/* Hero */}
+      
       <section className="px-8 py-20 text-center">
         <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-pink-600">
           RIFAYA Beauty
@@ -53,7 +53,7 @@ function Home() {
         </Link>
       </section>
 
-      {/* Categories */}
+    
       <section className="px-8 pb-16">
         <h2 className="mb-8 text-center text-2xl font-bold text-gray-800">
           Explore Beauty
