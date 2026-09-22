@@ -2,14 +2,16 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-import { ShoppingBag } from "lucide-react";
-import { useDispatch } from "react-redux"
+import { Heart } from "lucide-react";
+import { useDispatch,useSelector } from "react-redux"
 import { addtocart } from "../redux/cart"
-
+import { togglewishlist } from "../redux/wishlist"
 function Productdetails() {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1);
   const dispatch=useDispatch();
+  const wishlist=useSelector((state)=>state.wishlist.items)
+  const iswishlisted=wishlist.some((item)=>item.id===data?.id)
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["product", id],
@@ -107,8 +109,9 @@ function Productdetails() {
                 Best Seller
               </span>
 
-              <button className="absolute right-4 top-4 text-3xl text-gray-500 hover:text-pink-600">
-                ♡
+              <button onClick={()=>dispatch(togglewishlist(data))} className={`absolute right-4 top-4 text-3xl text-gray-500 hover:text-pink-600 ${iswiahlisted?"text-pink-600":"text-gray-500"}`}>
+                <Heart size={26} fill={iswishlisted?"currentcolor":"none"}/>
+                
               </button>
 
               <img
