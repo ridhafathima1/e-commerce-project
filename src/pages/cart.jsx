@@ -1,4 +1,5 @@
 import {useSelector,useDispatch} from "react-redux"
+import { removefromcart } from "../redux/cart"
 import{Link} from "react-router-dom"
 function Cart(){
     const dispatch=useDispatch();
@@ -48,6 +49,7 @@ function Cart(){
                 </div>
 
                 <p>Quantity: 1</p>
+                <button onClick={()=>dispatch(removefromcart(item.id))} className="rounded-lg bg-red-500 px-4 py-2 text-white hover:bg-red-600">Remove</button>
               </div>
             ))}
           </div>
