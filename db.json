@@ -239,7 +239,7 @@
       "price": 299,
       "stock": 39,
       "description": "Silicone Face Cleansing Brush for an everyday beauty tools routine.",
-      "image": "https://placehold.co/600x600?text=Silicone+Face+Cleansing+Brush"
+      "image": "/brush.jpeg"
     },
     {
       "id": "107",
@@ -248,7 +248,7 @@
       "price": 449,
       "stock": 15,
       "description": "Makeup Sponge Set for an everyday beauty tools routine.",
-      "image": "https://placehold.co/600x600?text=Makeup+Sponge+Set"
+      "image": "/sponge.jpeg"
     },
     {
       "id": "108",
@@ -257,7 +257,7 @@
       "price": 379,
       "stock": 22,
       "description": "Professional Makeup Brush Set for an everyday beauty tools routine.",
-      "image": "https://placehold.co/600x600?text=Professional+Makeup+Brush+Set"
+      "image": "set.jpeg"
     },
     {
       "id": "109",
