@@ -150,7 +150,7 @@
       "price": 349,
       "stock": 19,
       "description": "Hydrating Body Lotion for an everyday body care routine.",
-      "image": "https://placehold.co/600x600?text=Hydrating+Body+Lotion"
+      "image": "/bodylotion.png"
     },
     {
       "id": "82",
@@ -159,8 +159,7 @@
       "price": 499,
       "stock": 26,
       "description": "Shea Butter Body Cream for an everyday body care routine.",
-      "image": "https://placehold.co/600x600?text=Shea+Butter+Body+Cream"
-    },
+      "image": "/bodycream.png"    },
     {
       "id": "83",
       "name": "Vanilla Body Scrub",
@@ -168,7 +167,7 @@
       "price": 699,
       "stock": 33,
       "description": "Vanilla Body Scrub for an everyday body care routine.",
-      "image": "https://placehold.co/600x600?text=Vanilla+Body+Scrub"
+      "image": "/bodyscrub.jpeg"
     },
     {
       "id": "84",
@@ -177,7 +176,7 @@
       "price": 399,
       "stock": 40,
       "description": "Lavender Shower Gel for an everyday body care routine.",
-      "image": "https://placehold.co/600x600?text=Lavender+Shower+Gel"
+      "image": "/showergel.jpeg"
     },
     {
       "id": "85",
@@ -186,7 +185,7 @@
       "price": 549,
       "stock": 16,
       "description": "Coffee Body Scrub for an everyday body care routine.",
-      "image": "https://placehold.co/600x600?text=Coffee+Body+Scrub"
+      "image": "/coffee.jpeg"
     },
     {
       "id": "96",
@@ -195,7 +194,7 @@
       "price": 299,
       "stock": 31,
       "description": "Rose Eau De Parfum for an everyday fragrance routine.",
-      "image": "https://placehold.co/600x600?text=Rose+Eau+De+Parfum"
+      "image": "/rose.jpeg"
     },
     {
       "id": "97",
