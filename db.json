@@ -10,12 +10,12 @@
   "products": [
     {
       "id": "1",
-      "name": "Hydrating Face Wash",
+      "name": "RIFAYA Gentle Face Wash",
       "category": "Skincare",
       "price": 349,
       "stock": 17,
       "description": "Hydrating Face Wash for an everyday skincare routine.",
-      "image": "https://placehold.co/600x600?text=Hydrating+Face+Wash"
+      "image":"/facewash.png"
     },
     {
       "id": "2",
@@ -24,7 +24,7 @@
       "price": 499,
       "stock": 24,
       "description": "Vitamin C Serum for an everyday skincare routine.",
-      "image": "https://placehold.co/600x600?text=Vitamin+C+Serum"
+      "image": "/vitamincserum.png"
     },
     {
       "id": "3",
@@ -33,7 +33,7 @@
       "price": 699,
       "stock": 31,
       "description": "Hyaluronic Acid Serum for an everyday skincare routine.",
-      "image": "https://placehold.co/600x600?text=Hyaluronic+Acid+Serum"
+      "image":"/hyaluronicacid.png"
     },
     {
       "id": "4",
@@ -42,7 +42,7 @@
       "price": 399,
       "stock": 38,
       "description": "Aloe Vera Gel for an everyday skincare routine.",
-      "image": "https://placehold.co/600x600?text=Aloe+Vera+Gel"
+      "image": "/aloeveragel.png"
     },
     {
       "id": "5",
@@ -51,7 +51,7 @@
       "price": 549,
       "stock": 14,
       "description": "Daily Moisturizer for an everyday skincare routine.",
-      "image": "https://placehold.co/600x600?text=Daily+Moisturizer"
+      "image": "/moisturizer.png"
     },
     {
       "id": "31",
@@ -60,7 +60,7 @@
       "price": 349,
       "stock": 10,
       "description": "Smooth Shine Shampoo for an everyday haircare routine.",
-      "image": "https://placehold.co/600x600?text=Smooth+Shine+Shampoo"
+      "image": "/shampoo.png"
     },
     {
       "id": "32",
@@ -69,7 +69,7 @@
       "price": 499,
       "stock": 17,
       "description": "Nourishing Conditioner for an everyday haircare routine.",
-      "image": "https://placehold.co/600x600?text=Nourishing+Conditioner"
+      "image": "/conditioner.png"
     },
     {
       "id": "33",
@@ -78,7 +78,7 @@
       "price": 699,
       "stock": 24,
       "description": "Coconut Hair Oil for an everyday haircare routine.",
-      "image": "https://placehold.co/600x600?text=Coconut+Hair+Oil"
+      "image": "/hairoil.png"
     },
     {
       "id": "34",
@@ -87,7 +87,7 @@
       "price": 399,
       "stock": 31,
       "description": "Argan Hair Serum for an everyday haircare routine.",
-      "image": "https://placehold.co/600x600?text=Argan+Hair+Serum"
+      "image": "/arganhairserum.png"
     },
     {
       "id": "35",
@@ -96,7 +96,7 @@
       "price": 549,
       "stock": 38,
       "description": "Keratin Hair Mask for an everyday haircare routine.",
-      "image": "https://placehold.co/600x600?text=Keratin+Hair+Mask"
+      "image": "/hairmask.png"
     },
     {
       "id": "61",

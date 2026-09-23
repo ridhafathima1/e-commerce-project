@@ -5,19 +5,20 @@ import { useState } from "react";
 import { useSelector,useDispatch } from "react-redux"
 import { togglewishlist } from "../redux/wishlist"
 import { Heart } from "lucide-react"
+import { addtocart } from "../redux/cart";
 
 function Products() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
   const dispatch=useDispatch();
   const wishlist=useSelector((state)=>state.wishlist.items)
-
+const cart=useSelector((state)=>state.cart.items);
   const { data, isLoading, isError } = useQuery({
     queryKey: ["products"],
     queryFn: () =>
       axios
         .get(
-          "https://raw.githubusercontent.com/ridhafathima1/e-commerce-project/main/db.json"
+          "http://localhost:3000/products"
         )
         .then((res) => res.data),
   });
@@ -40,7 +41,7 @@ function Products() {
     );
   }
 
-  const products = data.products || [];
+  const products = data || [];
 
   const categories = [
     "All",
@@ -96,7 +97,7 @@ function Products() {
   to="/cart"
   className="rounded-full bg-pink-100 px-4 py-2 text-pink-600"
 >
-  Bag
+  Bag({cart.length})
 </Link>
       </nav>
 
@@ -172,6 +173,7 @@ function Products() {
 
             {filteredProducts.map((product) => {
               const iswishlisted=wishlist.some((item)=>item.id===product.id);
+              const isincart=cart.some((item)=>item.id===product.id)
               return(
               <div
                 key={product.id}
@@ -182,7 +184,7 @@ function Products() {
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-90 w-full object-cover transition duration-500 group-hover:scale-105"
                   />
 
                   <button 
@@ -216,10 +218,14 @@ function Products() {
                   </div>
 
                   <Link to={`/products/${product.id}`}
-                     className="mt-5 w-full rounded-xl bg-pink-600 py-3 font-semibold text-white transition hover:bg-pink-700">
+                     className="mt-5 block  w-full rounded-xl bg-pink-600 py-3 text-center font-semibold text-white transition hover:bg-pink-700">
                       View Details
                     
                   </Link>
+                  <button onClick={()=>dispatch(addtocart(product))} disabled={isincart}
+                  className={`mt-3 w-full rounded-xl py-3 font-semibold transition ${
+                    isincart?"cursor-not-allowed bg-gray-200 text-gray-500":"bg-gray-900 text-white hover:bg-gray-800"
+                  }`}>{isincart?"added to bag":"add to bag"}</button>
 
                 </div>
               </div>

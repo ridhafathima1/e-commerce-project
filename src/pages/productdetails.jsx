@@ -8,10 +8,10 @@ import { addtocart } from "../redux/cart"
 import { togglewishlist } from "../redux/wishlist"
 function Productdetails() {
   const { id } = useParams();
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1); 
+
   const dispatch=useDispatch();
   const wishlist=useSelector((state)=>state.wishlist.items)
-  const iswishlisted=wishlist.some((item)=>item.id===data?.id)
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["product", id],
@@ -22,7 +22,7 @@ function Productdetails() {
         )
         .then((res) => {
           const product = res.data.products.find(
-            (item) => item.id === String(id)
+            (item) => String(item.id) === String(id)
           );
 
           return product;
@@ -51,6 +51,10 @@ function Productdetails() {
       </div>
     );
   }
+  const iswishlisted=wishlist.some((item)=>item.id===data.id)
+  const handleaddtobag=()=>{
+    dispatch(addtocart({...data,quantity:quantity,}))
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -76,11 +80,8 @@ function Productdetails() {
               Products
             </Link>
 
-            <span className="cursor-pointer hover:text-pink-600">
-              ♡ Wishlist
-            </span>
 
-          <Link to="/cart">Bag</Link>
+          <Link className="hover:text-pink-600" to="/cart">Bag</Link>
           </div>
 
         </div>
@@ -109,7 +110,7 @@ function Productdetails() {
                 Best Seller
               </span>
 
-              <button onClick={()=>dispatch(togglewishlist(data))} className={`absolute right-4 top-4 text-3xl text-gray-500 hover:text-pink-600 ${iswiahlisted?"text-pink-600":"text-gray-500"}`}>
+              <button onClick={()=>dispatch(togglewishlist(data))} className={`absolute right-4 top-4 text-3xl text-gray-500 hover:text-pink-600 ${iswishlisted?"text-pink-600":"text-gray-500"}`}>
                 <Heart size={26} fill={iswishlisted?"currentcolor":"none"}/>
                 
               </button>
@@ -193,7 +194,7 @@ function Productdetails() {
                   }
                   className="px-4 py-2 text-xl hover:bg-gray-100"
                 >
-                  −
+                  _
                 </button>
 
                 <span className="px-5">
