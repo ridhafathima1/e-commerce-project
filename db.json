@@ -203,7 +203,7 @@
       "price": 449,
       "stock": 38,
       "description": "Vanilla Body Fragrance for an everyday fragrance routine.",
-      "image": "https://placehold.co/600x600?text=Vanilla+Body+Fragrance"
+      "image": "/vanilla.jpeg"
     },
     {
       "id": "98",
@@ -212,7 +212,7 @@
       "price": 379,
       "stock": 14,
       "description": "Jasmine Mist for an everyday fragrance routine.",
-      "image": "https://placehold.co/600x600?text=Jasmine+Mist"
+      "image": "jasmine.jpeg"
     },
     {
       "id": "99",
@@ -221,7 +221,7 @@
       "price": 599,
       "stock": 21,
       "description": "Citrus Fresh Body Mist for an everyday fragrance routine.",
-      "image": "https://placehold.co/600x600?text=Citrus+Fresh+Body+Mist"
+      "image": "/citrus.jpeg"
     },
     {
       "id": "100",
@@ -230,7 +230,7 @@
       "price": 429,
       "stock": 28,
       "description": "Floral Perfume Spray for an everyday fragrance routine.",
-      "image": "https://placehold.co/600x600?text=Floral+Perfume+Spray"
+      "image": "floral.jpeg"
     },
     {
       "id": "106",
