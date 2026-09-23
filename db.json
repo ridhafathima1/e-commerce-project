@@ -105,7 +105,7 @@
       "price": 349,
       "stock": 34,
       "description": "Nude Everyday Lipstick for an everyday makeup routine.",
-      "image": "https://placehold.co/600x600?text=Nude+Everyday+Lipstick"
+      "image": "/lipstick.png"
     },
     {
       "id": "62",
@@ -114,7 +114,7 @@
       "price": 499,
       "stock": 10,
       "description": "Rose Pink Lip Gloss for an everyday makeup routine.",
-      "image": "https://placehold.co/600x600?text=Rose+Pink+Lip+Gloss"
+      "image": "/lipgloss.png"
     },
     {
       "id": "63",
@@ -123,7 +123,7 @@
       "price": 699,
       "stock": 17,
       "description": "Liquid Eyeliner for an everyday makeup routine.",
-      "image": "https://placehold.co/600x600?text=Liquid+Eyeliner"
+      "image": "/eyeliner.png"
     },
     {
       "id": "64",
@@ -132,7 +132,7 @@
       "price": 399,
       "stock": 24,
       "description": "Lengthening Mascara for an everyday makeup routine.",
-      "image": "https://placehold.co/600x600?text=Lengthening+Mascara"
+      "image": "/mascara.png"
     },
     {
       "id": "65",
@@ -141,7 +141,7 @@
       "price": 549,
       "stock": 31,
       "description": "Soft Glow Blush for an everyday makeup routine.",
-      "image": "https://placehold.co/600x600?text=Soft+Glow+Blush"
+      "image": "/blush.png"
     },
     {
       "id": "81",
