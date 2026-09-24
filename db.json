@@ -266,7 +266,7 @@
       "price": 599,
       "stock": 29,
       "description": "Hair Sectioning Clips for an everyday beauty tools routine.",
-      "image": "https://placehold.co/600x600?text=Hair+Sectioning+Clips"
+      "image": "clips.jpeg"
     },
     {
       "id": "110",
@@ -275,7 +275,7 @@
       "price": 429,
       "stock": 36,
       "description": "Portable Beauty Mirror for an everyday beauty tools routine.",
-      "image": "https://placehold.co/600x600?text=Portable+Beauty+Mirror"
+      "image": "/mirror.jpeg"
     },
     {
       "id": "116",
@@ -284,7 +284,7 @@
       "price": 299,
       "stock": 16,
       "description": "Vanilla Lip Balm for an everyday lip care routine.",
-      "image": "https://placehold.co/600x600?text=Vanilla+Lip+Balm"
+      "image": "/lipbalm.jpeg"
     },
     {
       "id": "117",
@@ -293,7 +293,7 @@
       "price": 449,
       "stock": 23,
       "description": "Berry Lip Balm for an everyday lip care routine.",
-      "image": "https://placehold.co/600x600?text=Berry+Lip+Balm"
+      "image": "/berry.jpeg"
     },
     {
       "id": "118",
@@ -302,7 +302,7 @@
       "price": 379,
       "stock": 30,
       "description": "Honey Lip Mask for an everyday lip care routine.",
-      "image": "https://placehold.co/600x600?text=Honey+Lip+Mask"
+      "image": "/honey.jpeg"
     },
     {
       "id": "119",
@@ -311,7 +311,7 @@
       "price": 599,
       "stock": 37,
       "description": "Tinted Lip Balm for an everyday lip care routine.",
-      "image": "https://placehold.co/600x600?text=Tinted+Lip+Balm"
+      "image": "/tinted.jpeg"
     },
     {
       "id": "120",
@@ -320,7 +320,7 @@
       "price": 429,
       "stock": 13,
       "description": "Coconut Lip Scrub for an everyday lip care routine.",
-      "image": "https://placehold.co/600x600?text=Coconut+Lip+Scrub"
+      "image": "/care.jpeg"
     }
   ],
   "orders": [],
