@@ -11,6 +11,7 @@ import Wishlist from "../pages/wishlist";
 import ProtectedRoute from "./protectedroute";
 import Adminlogin from "../admin-side/pages/adminlogin";
 import Dashboard from "../admin-side/pages/dashboard"
+import Adminproducts from "../admin-side/pages/adminproducts"
 function AppRoutes() {
   return (
       <Routes>
@@ -27,6 +28,7 @@ function AppRoutes() {
            <Route path="/admin/login"
             element={<Adminlogin/>}/>
 <Route path="/admin/dashboard" element={<Dashboard/>}/>
+<Route path="/admin/adminproducts" element={<Adminproducts/>}/>
         <Route
           path="/home"
           element={<Home />}/>
