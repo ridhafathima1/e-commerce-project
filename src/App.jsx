@@ -1,22 +1,39 @@
-import {BrowserRouter,Routes,Route,Navigate} from "react-router-dom"
-import Login from "./pages/login"
-import Home from "./pages/home"
-import Register from "./pages/register"
-import Products from "./pages/products"
-import Productdetails from "./pages/productdetails"
-import Cart from "./pages/cart"
-function App(){
-  return (
-    <BrowserRouter>
-    <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/register" element={<Register/>}/>
-      <Route path="/home" element={<Home/>}/>
-      <Route path="/products" element={<Products/>}/>
-      <Route path="/products/:id" element={<Productdetails/>}/>
-      <Route path="/cart" element={<Cart/>}/>
-      </Routes></BrowserRouter>
-  )
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/approutes";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchCart } from "./redux/cart";
+import { fetchWishlist } from "./redux/wishlist"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
+function App() {
+
+  const dispatch = useDispatch();
+
+ useEffect(() => {
+  const userId=localStorage.getItem("userId")
+  if(userId){
+   dispatch(fetchCart());
+   dispatch(fetchWishlist());
 }
-export default App
+}, [dispatch]);
+
+  
+
+
+  return (
+<>
+    <BrowserRouter>
+      <AppRoutes />
+        </BrowserRouter>
+    <ToastContainer position="top-right" autoClose={2000}/>
+</>
+      
+
+
+  );
+
+}
+
+export default App;

@@ -1,51 +1,35 @@
+
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useSelector,useDispatch } from "react-redux"
-import { togglewishlist } from "../redux/wishlist"
-import { Heart } from "lucide-react"
-import { addtocart } from "../redux/cart";
+import Navbar from "../components/navbar";
 
 function Products() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("All");
-  const dispatch=useDispatch();
-  const wishlist=useSelector((state)=>state.wishlist.items)
-const cart=useSelector((state)=>state.cart.items);
-  const { data, isLoading, isError } = useQuery({
+  const[sort,setsort]=useState("");
+  const {
+    data: products = [],
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: ["products"],
     queryFn: () =>
       axios
-        .get(
-          "http://localhost:3000/products"
-        )
+        .get("http://localhost:3000/products")
         .then((res) => res.data),
   });
 
-  if (isLoading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-pink-50">
-        <p className="text-lg font-semibold text-pink-600">
-          Loading RIFAYA products...
-        </p>
-      </div>
-    );
-  }
-
-  if (isError) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <p className="text-red-500">Something went wrong.</p>
-      </div>
-    );
-  }
-
-  const products = data || [];
-
   const categories = [
     "All",
-    ...new Set(products.map((product) => product.category)),
+    "Skincare",
+    "Haircare",
+    "Makeup",
+    "Body Care",
+    "Fragrance",
+    "Beauty Tools",
+    "Lip Care",
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -54,208 +38,194 @@ const cart=useSelector((state)=>state.cart.items);
       .includes(search.toLowerCase());
 
     const matchesCategory =
-      category === "All" || product.category === category;
+      category === "All" ||
+      product.category.toLowerCase() === category.toLowerCase();
 
     return matchesSearch && matchesCategory;
-  });
-  
+  })
+.sort((a,b)=>{
+  if(sort==="low"){
+    return Number(a.price)-Number(b.price)
+  }
+  if(sort==="high"){
+    return Number(b.price)-Number(a.price)
+  }
+  return 0;
+})
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-pink-50">
+        <Navbar />
+
+        <div className="flex min-h-[60vh] items-center justify-center">
+          <p className="text-lg font-semibold text-pink-600">
+            Loading products...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="min-h-screen bg-pink-50">
+        <Navbar />
+
+        <div className="flex min-h-[60vh] items-center justify-center">
+          <p className="text-lg font-semibold text-red-500">
+            Failed to load products.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-pink-50">
+      <Navbar />
 
-      
-      <nav className="sticky top-0 z-10 flex items-center justify-between bg-white px-6 py-4 shadow-sm md:px-10">
-
-        <Link to="/home">
-          <h1 className="text-3xl font-bold text-pink-600">
-            GLORA
-          </h1>
-
-          <p className="text-xs tracking-widest text-gray-500">
-            RIFAYA BEAUTY
-          </p>
-        </Link>
-
-        <div className="hidden gap-8 md:flex">
-          <Link
-            to="/home"
-            className="text-gray-700 hover:text-pink-600"
-          >
-            Home
-          </Link>
-
-          <Link
-            to="/products"
-            className="font-semibold text-pink-600"
-          >
-            Products
-          </Link>
-
-          <Link to="/register" >Sign Up</Link>
-        </div>
-<Link
-  to="/cart"
-  className="rounded-full bg-pink-100 px-4 py-2 text-pink-600"
->
-  Bag({cart.length})
-</Link>
-      </nav>
-
-      
-      <section className="px-6 py-12 text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-pink-500">
-          RIFAYA Beauty
+      <section className="px-6 py-16 text-center">
+        <p className="text-sm font-semibold tracking-[0.4em] text-pink-600">
+          RIFAYA BEAUTY
         </p>
 
-        <h2 className="mt-3 text-4xl font-bold text-gray-800">
+        <h1 className="mt-5 text-4xl font-bold text-gray-900 md:text-5xl">
           Discover Your Beauty
-        </h2>
+        </h1>
 
-        <p className="mx-auto mt-3 max-w-xl text-gray-500">
+        <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-gray-600">
           Explore our collection of skincare and beauty essentials
           created for your everyday routine.
         </p>
       </section>
 
-    
-      <section className="mx-auto max-w-7xl px-6">
+      <section className="mx-4 rounded-3xl bg-white p-6 shadow-sm md:mx-6 md:p-8">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
 
-        <div className="flex flex-col gap-4 rounded-2xl bg-white p-5 shadow-sm md:flex-row md:items-center md:justify-between">
+          <div className="w-full lg:w-[380px]">
+            <input
+              type="text"
+              placeholder="Search products..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full rounded-xl border border-gray-200 px-5 py-4 text-gray-700 outline-none transition focus:border-pink-500 focus:ring-2 focus:ring-pink-100"
+            />
+          </div>
 
-          <input
-            type="text"
-            placeholder="Search products..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-pink-500 md:w-80"
-          />
-          <p>searching:{search}</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-1 flex-wrap items-center gap-3">
             {categories.map((item) => (
               <button
                 key={item}
                 onClick={() => setCategory(item)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                className={`rounded-full px-5 py-3 text-sm font-medium transition ${
                   category === item
                     ? "bg-pink-600 text-white"
-                    : "bg-pink-50 text-gray-600 hover:bg-pink-100"
+                    : "bg-pink-50 text-gray-700 hover:bg-pink-100"
                 }`}
               >
                 {item}
               </button>
+             
             ))}
+             <button onClick={()=>setsort("low")} className={`rounded-full px-5 py-3 text-sm font-medium ${sort==="low"?"bg-pink-600 text-white":"bg-pink-50 text-gray-700"}`}>price:low to high</button>
+             <button onClick={()=>setsort("high")} className={`rounded-full px-5 py-3 text-sm font medium ${sort==="high"?"bg-pink-600 text-white":"bg-pink-50 text-gray-700"}`}>price:high to low</button>
+             <button onClick={()=>setsort("")}
+             className="rounded-full bg-gray-100 px-5 py-3 text-sm font-medium">clear</button>
           </div>
 
         </div>
       </section>
 
-      
-      <div className="mx-auto mt-10 max-w-7xl px-6">
-        <p className="text-sm text-gray-500">
-        {filteredProducts.length} products found
+      <div className="px-6 py-10">
+        <p className="text-gray-600">
+          {filteredProducts.length} products found
         </p>
       </div>
 
-      
-      <main className="mx-auto max-w-7xl px-6 py-6">
-
+      <main className="px-4 pb-16 md:px-6">
         {filteredProducts.length === 0 ? (
           <div className="rounded-2xl bg-white py-20 text-center">
-            <p className="text-lg text-gray-500">
-              No products found.
+            <p className="text-xl font-semibold text-gray-700">
+              No products found
             </p>
-              <p className="mt-2 text-gray-500">
-              Try searching for another product.
+
+            <p className="mt-2 text-gray-500">
+              Try another search or category.
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-            {filteredProducts.map((product) => {
-              const iswishlisted=wishlist.some((item)=>item.id===product.id);
-              const isincart=cart.some((item)=>item.id===product.id)
-              return(
+            {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="group overflow-hidden rounded-2xl bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="group overflow-hidden rounded-2xl bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="relative overflow-hidden bg-pink-50">
+                <div className="relative flex h-80 items-center justify-center overflow-hidden bg-gray-50">
 
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-90 w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-full w-full object-contain p-5 transition duration-500 group-hover:scale-105"
                   />
 
-                  <button 
-                    onClick={()=>dispatch(togglewishlist(product))} 
-                    className={`absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-lg shadow-md hover:bg-pink-100 ${
-                      iswishlisted?"text-pink-600":"text-gray-500"
-                    }`}><Heart size={22} fill={iswishlisted?"currentcolor":"none"}/>
-                  </button>
-
                 </div>
+
                 <div className="p-5">
 
-                  <p className="text-xs font-medium uppercase tracking-wider text-pink-500">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-pink-600">
                     {product.category}
                   </p>
 
-                  <h3 className="mt-2 min-h-[3.5rem] text-lg font-semibold text-gray-800">
+                  <h2 className="mt-2 line-clamp-2 min-h-[56px] text-lg font-semibold text-gray-900">
                     {product.name}
-                  </h3>
+                  </h2>
 
-                  <div className="mt-3 flex items-center justify-between">
+                  <p className="mt-3 text-2xl font-bold text-gray-900">
+                    ₹{product.price}
+                  </p>
 
-                    <p className="text-xl font-bold text-gray-900">
-                      ₹{product.price}
-                    </p>
+                  <p className="mt-2 text-sm text-gray-500">
+                    {product.stock > 0
+                      ? `${product.stock} items available`
+                      : "Out of stock"}
+                  </p>
 
-                    <span className="text-sm text-yellow-500">
-                      ★{product.rating||"4.5"}
-                    </span>
-
-                  </div>
-
-                  <Link to={`/products/${product.id}`}
-                     className="mt-5 block  w-full rounded-xl bg-pink-600 py-3 text-center font-semibold text-white transition hover:bg-pink-700">
-                      View Details
-                    
+                  <Link
+                    to={`/products/${product.id}`}
+                    className="mt-5 block w-full rounded-xl bg-pink-600 py-3 text-center font-semibold text-white transition hover:bg-pink-700"
+                  >
+                    View Details
                   </Link>
-                  <button onClick={()=>dispatch(addtocart(product))} disabled={isincart}
-                  className={`mt-3 w-full rounded-xl py-3 font-semibold transition ${
-                    isincart?"cursor-not-allowed bg-gray-200 text-gray-500":"bg-gray-900 text-white hover:bg-gray-800"
-                  }`}>{isincart?"added to bag":"add to bag"}</button>
 
                 </div>
               </div>
-              )
-})}
+            ))}
 
           </div>
         )}
-
       </main>
 
-      {/* Footer */}
-      <footer className="mt-16 bg-white px-6 py-10 text-center">
-
+      <footer className="border-t bg-white px-6 py-10 text-center">
         <h2 className="text-2xl font-bold text-pink-600">
-          GLORA
+          GLOZA
         </h2>
 
-        <p className="mt-1 text-sm tracking-widest text-gray-500">
+        <p className="mt-2 text-sm tracking-widest text-gray-500">
           RIFAYA BEAUTY
         </p>
 
         <p className="mt-4 text-sm text-gray-400">
-          Beauty made simple, beautiful and yours.
+          Your beauty, your glow.
         </p>
 
+        <p className="mt-4 text-xs text-gray-400">
+          © 2026 GLOZA. All rights reserved.
+        </p>
       </footer>
-
     </div>
   );
 }
 
 export default Products;
+

@@ -1,10 +1,64 @@
 {
+  "wishlist": [
+    {
+      "userId": "Bsl2c8oHgi4",
+      "productId": "2",
+      "name": "Vitamin C Serum",
+      "price": 499,
+      "image": "/vitamincserum.png",
+      "category": "Skincare",
+      "description": "Vitamin C Serum for an everyday skincare routine.",
+      "id": "dpNseIeHewU"
+    },
+    {
+      "userId": "Bsl2c8oHgi4",
+      "productId": "32",
+      "name": "Nourishing Conditioner",
+      "price": 499,
+      "image": "/conditioner.png",
+      "category": "Haircare",
+      "description": "Nourishing Conditioner for an everyday haircare routine.",
+      "id": "w_UGDAxYT_0"
+    }
+  ],
+  "cart": [
+    {
+      "userId": "IpxpJW9mlvI",
+      "productId": "2",
+      "name": "Vitamin C Serum",
+      "price": 499,
+      "image": "/vitamincserum.png",
+      "category": "Skincare",
+      "description": "Vitamin C Serum for an everyday skincare routine.",
+      "stock": 24,
+      "quantity": 1,
+      "id": "mzk3cTTM0xU"
+    },
+    {
+      "userId": "Bsl2c8oHgi4",
+      "productId": "2",
+      "name": "Vitamin C Serum",
+      "price": 499,
+      "image": "/vitamincserum.png",
+      "category": "Skincare",
+      "description": "Vitamin C Serum for an everyday skincare routine.",
+      "stock": 24,
+      "quantity": 1,
+      "id": "JOFs9IhhFCg"
+    }
+  ],
   "users": [
     {
-      "name": "ridha fathima",
+      "name": "RIDHA FATHIMA T",
       "email": "ridha@gmail.com",
       "password": "123456",
-      "id": "H02xFctFzNk"
+      "id": "IpxpJW9mlvI"
+    },
+    {
+      "name": "hiiii",
+      "email": "ridhaa@gmail.com",
+      "password": "1234567",
+      "id": "Bsl2c8oHgi4"
     }
   ],
   "products": [
@@ -13,9 +67,9 @@
       "name": "RIFAYA Gentle Face Wash",
       "category": "Skincare",
       "price": 349,
-      "stock": 17,
+      "stock": 0,
       "description": "Hydrating Face Wash for an everyday skincare routine.",
-      "image":"/facewash.png"
+      "image": "/facewash.png"
     },
     {
       "id": "2",
@@ -33,7 +87,7 @@
       "price": 699,
       "stock": 31,
       "description": "Hyaluronic Acid Serum for an everyday skincare routine.",
-      "image":"/hyaluronicacid.png"
+      "image": "/hyaluronicacid.png"
     },
     {
       "id": "4",
@@ -159,7 +213,8 @@
       "price": 499,
       "stock": 26,
       "description": "Shea Butter Body Cream for an everyday body care routine.",
-      "image": "/bodycream.png"    },
+      "image": "/bodycream.png"
+    },
     {
       "id": "83",
       "name": "Vanilla Body Scrub",
@@ -323,6 +378,59 @@
       "image": "/care.jpeg"
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "items": [
+        {
+          "userId": "H02xFctFzNk",
+          "productId": "34",
+          "name": "Argan Hair Serum",
+          "price": 399,
+          "image": "/arganhairserum.png",
+          "category": "Haircare",
+          "description": "Argan Hair Serum for an everyday haircare routine.",
+          "stock": 31,
+          "quantity": 1,
+          "id": "34"
+        },
+        {
+          "userId": "H02xFctFzNk",
+          "productId": "32",
+          "name": "Nourishing Conditioner",
+          "price": 499,
+          "image": "/conditioner.png",
+          "category": "Haircare",
+          "description": "Nourishing Conditioner for an everyday haircare routine.",
+          "stock": 17,
+          "quantity": 1,
+          "id": "32"
+        }
+      ],
+      "total": 898,
+      "status": "Placed",
+      "date": "2026-09-28T03:52:52.647Z",
+      "id": "2PT-Cjpazaw"
+    },
+    {
+      "items": [
+        {
+          "userId": "IpxpJW9mlvI",
+          "productId": "2",
+          "name": "Vitamin C Serum",
+          "price": 499,
+          "image": "/vitamincserum.png",
+          "category": "Skincare",
+          "description": "Vitamin C Serum for an everyday skincare routine.",
+          "stock": 24,
+          "quantity": 1,
+          "id": "2"
+        }
+      ],
+      "total": 499,
+      "status": "Placed",
+      "date": "2026-09-28T09:35:08.251Z",
+      "id": "876WQW-ODWk"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
