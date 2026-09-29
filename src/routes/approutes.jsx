@@ -10,6 +10,7 @@ import Orders from "../pages/orders";
 import Wishlist from "../pages/wishlist";
 import ProtectedRoute from "./protectedroute";
 import Adminlogin from "../admin-side/pages/adminlogin";
+import Dashboard from "../admin-side/pages/dashboard"
 function AppRoutes() {
   return (
       <Routes>
@@ -25,7 +26,7 @@ function AppRoutes() {
 
            <Route path="/admin/login"
             element={<Adminlogin/>}/>
-
+<Route path="/admin/dashboard" element={<Dashboard/>}/>
         <Route
           path="/home"
           element={<Home />}/>

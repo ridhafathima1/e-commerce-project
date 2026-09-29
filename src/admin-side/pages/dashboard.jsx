@@ -9,13 +9,13 @@ function Dashboard(){
     const[revenue,setrevenue]=useState(0);
     useEffect(()=>{
         axios.get("http://localhost:3000/products")
-        .then ((res)=>setproducts(res.data))
+        .then ((res)=>{setproducts(res.data)})
         axios.get("http://localhost:3000/users")
-        .then((res)=>setusers(res.data))
+        .then((res)=>{setusers(res.data)})
         axios.get("http://localhost:3000/orders")
-        .then((res)=>setorders(res.data))
+        .then((res)=>{setorders(res.data)
         const total=res.data.reduce((sum,order)=>sum+Number(order.total||0),0)
-        setrevenue(total);
+        setrevenue(total);})
     },[])
     return (
         <div>
