@@ -19,7 +19,7 @@ function Dashboard(){
     },[])
     return (
         <div>
-            <div clasName="flex">
+            <div className="flex">
               
                 <div className="flex-1 p-8">
                     <h1 className="text-3xl font-bold">Dashboard</h1></div>

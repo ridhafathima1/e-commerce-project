@@ -13,6 +13,7 @@ import Adminlogin from "../admin-side/pages/adminlogin";
 import Dashboard from "../admin-side/pages/dashboard"
 import Adminproducts from "../admin-side/pages/adminproducts"
 import Adminlayout from "../admin-side/components/adminlayout";
+import Adminprotectedroute from "../admin-side/adminprotected route/adminprotectedroute";
 function AppRoutes() {
   return (
       <Routes>
@@ -28,9 +29,10 @@ function AppRoutes() {
 
            <Route path="/admin/login"
             element={<Adminlogin/>}/>
-<Route path="/admin/dashboard" element={<Adminlayout><Dashboard/></Adminlayout>}/>
+<Route path="/admin/dashboard" element={
+  <Adminprotectedroute><Adminlayout><Dashboard/></Adminlayout></Adminprotectedroute>}/>
 
-<Route path="/admin/adminproducts" element={<Adminlayout><Adminproducts/></Adminlayout>}/>
+<Route path="/admin/products" element={<Adminprotectedroute><Adminlayout><Adminproducts/></Adminlayout></Adminprotectedroute>}/>
         <Route
           path="/home"
           element={<Home />}/>

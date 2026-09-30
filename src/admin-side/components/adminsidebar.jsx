@@ -6,7 +6,9 @@ function Adminsidebar(){
             <h1 className="mb-8 text-2xl font-bold">Admin Panel</h1>
             <div className="space-y-3">
                 <Link to="/admin/dashboard" className="flex items-center gap-3 rounded-lg p-3 hover:bg-gray-700">
-                <LayoutDashboard size={20}/>Products</Link>
+                <LayoutDashboard size={20}/>Dashboard</Link>
+                <Link to="/admin/products" className="flex items-center gap-3 rounded-lg p-3 hover:bg-gray-700">
+                <Package size={20}/>products</Link>
                 <Link to="/admin/users" className="flex item-center gap-3 rounded-lg p-3 hover:bg-gray-700">
                 <Users size={20}/>Users</Link>
                 <Link to="/admin/orders" className="flex items-center gap-3 rounded-lg p-3 hover:bg-gray-700">
