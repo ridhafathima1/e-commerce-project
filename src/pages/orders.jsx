@@ -6,6 +6,7 @@ function Orders() {
     data: orders = [],
     isLoading,
     isError,
+    refetch,
   } = useQuery({
     queryKey: ["orders"],
     queryFn: () =>
@@ -24,6 +25,14 @@ function Orders() {
         </div>
       </div>
     );
+  }
+  const cancelorder=(id)=>{
+    axios.patch(`http://localhost:3000/orders/${id}`,{
+      status:"cancelled",
+    })
+    .then(()=>{
+      refetch()
+    })
   }
   if (isError) {
     return (
@@ -70,6 +79,8 @@ function Orders() {
                 <p className="mt-2 text-sm text-gray-500">
                   {new Date(order.date).toLocaleString()}
                 </p>
+                {order.status!=="cancelled"&&(
+                <button onClick={()=>cancelorder(order.id)} className="mt-4 rounde-lg bg-red-500 px-4 py-2 text-white">Cancel order</button>)}
               </div>
             ))}
           </div>

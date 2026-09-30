@@ -45,6 +45,18 @@
       "stock": 24,
       "quantity": 1,
       "id": "JOFs9IhhFCg"
+    },
+    {
+      "userId": "H02xFctFzNk",
+      "productId": "32",
+      "name": "Nourishing Conditioner",
+      "price": 499,
+      "image": "/conditioner.png",
+      "category": "Haircare",
+      "description": "Nourishing Conditioner for an everyday haircare routine.",
+      "stock": 17,
+      "quantity": 1,
+      "id": "QPDoZ8S3Ioc"
     }
   ],
   "users": [
@@ -407,7 +419,7 @@
         }
       ],
       "total": 898,
-      "status": "Placed",
+      "status": "cancelled",
       "date": "2026-09-28T03:52:52.647Z",
       "id": "2PT-Cjpazaw"
     },
@@ -427,9 +439,29 @@
         }
       ],
       "total": 499,
-      "status": "Placed",
+      "status": "cancelled",
       "date": "2026-09-28T09:35:08.251Z",
       "id": "876WQW-ODWk"
+    },
+    {
+      "items": [
+        {
+          "userId": "H02xFctFzNk",
+          "productId": "32",
+          "name": "Nourishing Conditioner",
+          "price": 499,
+          "image": "/conditioner.png",
+          "category": "Haircare",
+          "description": "Nourishing Conditioner for an everyday haircare routine.",
+          "stock": 17,
+          "quantity": 1,
+          "id": "32"
+        }
+      ],
+      "total": 499,
+      "status": "cancelled",
+      "date": "2026-09-30T04:23:05.064Z",
+      "id": "-x8BzPXxEis"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

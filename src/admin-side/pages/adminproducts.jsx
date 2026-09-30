@@ -3,12 +3,30 @@ import axios from "axios"
 function Adminproducts(){
     const[products,setproducts]=useState([])
     const[form,setform]=useState(false)
+    const[name,setname]=useState("")
+    const[price,setprice]=useState("")
+    const[category,setcategory]=useState("")
     useEffect(()=>{
         axios.get("http://localhost:3000/products")
         .then((res)=>{
             setproducts(res.data)
         })
     },[]);
+    const handleaddproduct=()=>{
+        const newproduct={
+            name:name,
+            price:Number(price),
+            category:category,
+        };
+        axios.post("http://localhost:3000/products",newproduct)
+        .then((res)=>{
+            setproducts([...products,res.data]);
+            setname("")
+            setprice("")
+            setcategory("")
+            setform(false)
+        })
+    }
     return (
         <div className="p-8">
             <h1 className="mb-6 text-3xl font-bold">Products</h1>
@@ -16,10 +34,10 @@ function Adminproducts(){
             {form&&(
                 <div className="mb-6 rounded-xl bg-white p-6 shadow">
                     <h2 className="mb-4 text-xl font-bold">Add Product</h2>
-                    <input type="text" placeholder="Product Name" className="mb-3 w-full rounded-lg border p-3"/>
-                    <input type="number" placeholder="price" className="mb-3 w-full rounded-lg border p-3"/>
-                    <input type="text" placeholder="category" className="mb-3 w-full rounded-lg border p-3"/>
-                    <button className="rounded-lg bg-green-600 px-5 py-2 text-white">Save Product</button>
+                    <input type="text" placeholder="Product Name" value={name} onChange={(e)=>setname(e.target.value)} className="mb-3 w-full rounded-lg border p-3"/>
+                    <input type="number" placeholder="price" value={price} onChange={(e)=>setprice(e.target.value)}className="mb-3 w-full rounded-lg border p-3"/>
+                    <input type="text" placeholder="category"  value={category} onChange={(e)=>setcategory(e.target.value)}className="mb-3 w-full rounded-lg border p-3"/>
+                    <button onClick={handleaddproduct}className="rounded-lg bg-green-600 px-5 py-2 text-white">Save Product</button>
                     <button onClick={()=>setform(false)} className="ml-3 rounded-lg bg-gray-300 px-5 py-2">Cancel</button>
                     </div>
             )}
@@ -36,5 +54,5 @@ function Adminproducts(){
             </div>
         </div>
     )
-}
+}          
 export default Adminproducts;

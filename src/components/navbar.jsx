@@ -122,6 +122,10 @@ toast.success("Logged out successfully!")
         <ShoppingBag size={18} />
         Bag ({cart.length})
       </Link>
+      <Link to="/admin/login">
+      <button className="rounded-lg bg-pink-600 px-5 py-3 font-semibold text-white">
+        Admin Login</button>
+        </Link>
     </nav>
   );
 }
