@@ -2,7 +2,6 @@ import {useState,useEffect} from "react"
 import axios from "axios"
 import {Link} from "react-router-dom"
 import {Package,Users,ShoppingCart,IndianRupee,} from "lucide-react"
-import Adminsidebar from "../components/adminsidebar"
 function Dashboard(){
     const[products,setproducts]=useState([])
     const[users,setusers]=useState([])
@@ -21,7 +20,7 @@ function Dashboard(){
     return (
         <div>
             <div clasName="flex">
-                <Adminsidebar/>
+              
                 <div className="flex-1 p-8">
                     <h1 className="text-3xl font-bold">Dashboard</h1></div>
             </div>
