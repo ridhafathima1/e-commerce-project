@@ -56,7 +56,7 @@
       "description": "Nourishing Conditioner for an everyday haircare routine.",
       "stock": 17,
       "quantity": 1,
-      "id": "QPDoZ8S3Ioc"
+      "id": "6DGbPQtogT8"
     }
   ],
   "users": [
@@ -395,18 +395,6 @@
       "items": [
         {
           "userId": "H02xFctFzNk",
-          "productId": "34",
-          "name": "Argan Hair Serum",
-          "price": 399,
-          "image": "/arganhairserum.png",
-          "category": "Haircare",
-          "description": "Argan Hair Serum for an everyday haircare routine.",
-          "stock": 31,
-          "quantity": 1,
-          "id": "34"
-        },
-        {
-          "userId": "H02xFctFzNk",
           "productId": "32",
           "name": "Nourishing Conditioner",
           "price": 499,
@@ -418,30 +406,10 @@
           "id": "32"
         }
       ],
-      "total": 898,
-      "status": "cancelled",
-      "date": "2026-09-28T03:52:52.647Z",
-      "id": "2PT-Cjpazaw"
-    },
-    {
-      "items": [
-        {
-          "userId": "IpxpJW9mlvI",
-          "productId": "2",
-          "name": "Vitamin C Serum",
-          "price": 499,
-          "image": "/vitamincserum.png",
-          "category": "Skincare",
-          "description": "Vitamin C Serum for an everyday skincare routine.",
-          "stock": 24,
-          "quantity": 1,
-          "id": "2"
-        }
-      ],
       "total": 499,
       "status": "cancelled",
-      "date": "2026-09-28T09:35:08.251Z",
-      "id": "876WQW-ODWk"
+      "date": "2026-09-30T04:36:31.051Z",
+      "id": "M_aQF_SMNDI"
     },
     {
       "items": [
@@ -460,8 +428,8 @@
       ],
       "total": 499,
       "status": "cancelled",
-      "date": "2026-09-30T04:23:05.064Z",
-      "id": "-x8BzPXxEis"
+      "date": "2026-09-30T04:40:37.205Z",
+      "id": "XcRtW9cvKbM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

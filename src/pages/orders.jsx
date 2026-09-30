@@ -66,9 +66,11 @@ function Orders() {
                 key={order.id}
                 className="rounded-2xl bg-white p-6 shadow">
                 <div className="flex justify-between">
+                  <div>
                   <h2 className="font-semibold">
                     Order #{order.id}
                   </h2>
+                  <p className="mt-1 text-gray-600">{order.items[0].name}</p></div>
                   <span className="text-pink-600">
                     {order.status}
                   </span>
