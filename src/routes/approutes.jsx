@@ -15,6 +15,7 @@ import Adminproducts from "../admin-side/pages/adminproducts"
 import Adminlayout from "../admin-side/components/adminlayout";
 import Adminprotectedroute from "../admin-side/adminprotected route/adminprotectedroute";
 import Adminusers from "../admin-side/pages/adminusers";
+import Adminorders from "../admin-side/pages/adminorders";
 function AppRoutes() {
   return (
       <Routes>
@@ -41,6 +42,9 @@ function AppRoutes() {
     </Adminlayout>
   </Adminprotectedroute>
 }/>
+<Route path="/admin/orders" element={<Adminprotectedroute><Adminlayout>
+  <Adminorders/>
+  </Adminlayout></Adminprotectedroute>}/>
         <Route
           path="/home"
           element={<Home />}/>

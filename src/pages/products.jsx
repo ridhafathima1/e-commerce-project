@@ -128,7 +128,7 @@ function Products() {
              
             ))}
              <button onClick={()=>setsort("low")} className={`rounded-full px-5 py-3 text-sm font-medium ${sort==="low"?"bg-pink-600 text-white":"bg-pink-50 text-gray-700"}`}>price:low to high</button>
-             <button onClick={()=>setsort("high")} className={`rounded-full px-5 py-3 text-sm font medium ${sort==="high"?"bg-pink-600 text-white":"bg-pink-50 text-gray-700"}`}>price:high to low</button>
+             <button onClick={()=>setsort("high")} className={`rounded-full px-5 py-3 text-sm font-medium ${sort==="high"?"bg-pink-600 text-white":"bg-pink-50 text-gray-700"}`}>price:high to low</button>
              <button onClick={()=>setsort("")}
              className="rounded-full bg-gray-100 px-5 py-3 text-sm font-medium">clear</button>
           </div>

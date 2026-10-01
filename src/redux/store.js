@@ -6,7 +6,7 @@ import userReducer from "./user";
 import ordersReducer from "./orders";
 import adminproductReducer from "./adminproducts";
 import adminusersReducer from "./adminusers";
-import adminordersReducer from "../admin-side/pages/adminorders";
+import adminordersReducer from "./adminorders"
 export const store = configureStore({
   reducer: {
     cart: cartReducer,
