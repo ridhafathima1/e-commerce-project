@@ -1,7 +1,6 @@
 import {useState,useEffect} from "react"
 import {useDispatch,useSelector} from "react-redux"
-import { fetchProducts } from "../../redux/adminproducts"
-import axios from "axios"
+import { fetchProducts,addproduct,deleteproduct } from "../../redux/adminproducts"
 function Adminproducts(){
     const[form,setform]=useState(false)
     const[name,setname]=useState("")
@@ -12,20 +11,20 @@ function Adminproducts(){
    useEffect(()=>{
     dispatch(fetchProducts());
    },[dispatch])
+   const handledelete=(id)=>{
+    dispatch(deleteproduct(id))
+   }
     const handleaddproduct=()=>{
         const newproduct={
             name:name,
             price:Number(price),
             category:category,
         };
-        axios.post("http://localhost:3000/products",newproduct)
-        .then((res)=>{
-            setproducts([...products,res.data]);
-            setname("")
-            setprice("")
-            setcategory("")
-            setform(false)
-        })
+       dispatch(addproduct(newproduct))
+       setname("")
+       setprice("")
+       setcategory("")
+       setform(false)
     }
     return (
         <div className="p-8">
@@ -48,6 +47,7 @@ function Adminproducts(){
                             <h2 className="font-semibold">{product.name}</h2>
                             <p>{product.price}</p>
                             <p className="text-gray-500">{product.category}</p>
+                            <button className="rounded-lg bg-red-500 px-4 py-2 text-white" onClick={()=>handledelete(product.id)}>Delete</button>
                             </div>
                         </div>
                 ))}
