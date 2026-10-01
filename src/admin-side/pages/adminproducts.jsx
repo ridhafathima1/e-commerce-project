@@ -1,17 +1,17 @@
-import {useEffect,useState} from "react"
+import {useState,useEffect} from "react"
+import {useDispatch,useSelector} from "react-redux"
+import { fetchProducts } from "../../redux/adminproducts"
 import axios from "axios"
 function Adminproducts(){
-    const[products,setproducts]=useState([])
     const[form,setform]=useState(false)
     const[name,setname]=useState("")
     const[price,setprice]=useState("")
     const[category,setcategory]=useState("")
-    useEffect(()=>{
-        axios.get("http://localhost:3000/products")
-        .then((res)=>{
-            setproducts(res.data)
-        })
-    },[]);
+   const dispatch=useDispatch()
+   const products=useSelector((state)=>state.adminproducts.products);
+   useEffect(()=>{
+    dispatch(fetchProducts());
+   },[dispatch])
     const handleaddproduct=()=>{
         const newproduct={
             name:name,

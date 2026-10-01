@@ -23,18 +23,6 @@
   ],
   "cart": [
     {
-      "userId": "IpxpJW9mlvI",
-      "productId": "2",
-      "name": "Vitamin C Serum",
-      "price": 499,
-      "image": "/vitamincserum.png",
-      "category": "Skincare",
-      "description": "Vitamin C Serum for an everyday skincare routine.",
-      "stock": 24,
-      "quantity": 1,
-      "id": "mzk3cTTM0xU"
-    },
-    {
       "userId": "Bsl2c8oHgi4",
       "productId": "2",
       "name": "Vitamin C Serum",
@@ -64,13 +52,15 @@
       "name": "RIDHA FATHIMA T",
       "email": "ridha@gmail.com",
       "password": "123456",
-      "id": "IpxpJW9mlvI"
+      "id": "IpxpJW9mlvI",
+      "blocked": true
     },
     {
       "name": "hiiii",
       "email": "ridhaa@gmail.com",
       "password": "1234567",
-      "id": "Bsl2c8oHgi4"
+      "id": "Bsl2c8oHgi4",
+      "blocked": true
     }
   ],
   "products": [
@@ -436,6 +426,26 @@
       "status": "cancelled",
       "date": "2026-09-30T04:40:37.205Z",
       "id": "XcRtW9cvKbM"
+    },
+    {
+      "items": [
+        {
+          "userId": "IpxpJW9mlvI",
+          "productId": "2",
+          "name": "Vitamin C Serum",
+          "price": 499,
+          "image": "/vitamincserum.png",
+          "category": "Skincare",
+          "description": "Vitamin C Serum for an everyday skincare routine.",
+          "stock": 24,
+          "quantity": 1,
+          "id": "2"
+        }
+      ],
+      "total": 499,
+      "status": "cancelled",
+      "date": "2026-09-30T08:55:58.632Z",
+      "id": "YesK3OfRMWE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

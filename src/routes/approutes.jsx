@@ -14,6 +14,7 @@ import Dashboard from "../admin-side/pages/dashboard"
 import Adminproducts from "../admin-side/pages/adminproducts"
 import Adminlayout from "../admin-side/components/adminlayout";
 import Adminprotectedroute from "../admin-side/adminprotected route/adminprotectedroute";
+import Adminusers from "../admin-side/pages/adminusers";
 function AppRoutes() {
   return (
       <Routes>
@@ -33,6 +34,13 @@ function AppRoutes() {
   <Adminprotectedroute><Adminlayout><Dashboard/></Adminlayout></Adminprotectedroute>}/>
 
 <Route path="/admin/products" element={<Adminprotectedroute><Adminlayout><Adminproducts/></Adminlayout></Adminprotectedroute>}/>
+<Route path="/admin/users" element={
+  <Adminprotectedroute>
+    <Adminlayout>
+      <Adminusers/>
+    </Adminlayout>
+  </Adminprotectedroute>
+}/>
         <Route
           path="/home"
           element={<Home />}/>
