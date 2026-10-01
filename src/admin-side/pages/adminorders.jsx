@@ -14,6 +14,13 @@ function Adminorders(){
                 {orders.map((order)=>(
                     <div key={order.id} className="rounded-xl bg-white p-5 shadow">
                         <h2 className="font-semibold">Order {order.id}</h2>
+                        {order.items.map((item)=>(
+                            <div className="mb-3" key={item.productId}>
+                                <p className="font-semibold">{item.name}</p>
+                                <p className="text-gray-500">Quantity:{item.quantity}</p>
+                                <p className="text-gray-500">Price:{item.price}</p>
+                            </div>
+                        ))}
                         <p className="mt-2">Total {order.total}</p>
                         <p className="mt-1 text-gray-500">Status:{order.status}</p>
                     </div>
