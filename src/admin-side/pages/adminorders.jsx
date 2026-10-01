@@ -7,7 +7,7 @@ export const fetchorders=createAsyncThunk(
         return res.data;
     }
 )
-const adminorderslice=createSlice({
+const adminordersslice=createSlice({
     name:"adminorders",
     initialState:{
         orders:[],
