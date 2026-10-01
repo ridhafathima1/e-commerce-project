@@ -1,7 +1,10 @@
 import {useEffect} from "react"
 import { useSelector,useDispatch } from "react-redux"
-import {fetchusers,blockusers} from "../../redux/adminusers";
+import {fetchusers,blockusers,unblockuser} from "../../redux/adminusers";
 function Adminusers(){
+    const handleunblock=(id)=>{
+        dispatch(unblockuser(id))
+    }
     const handleblock=(id)=>{
         dispatch(blockusers(id))
     };
@@ -20,11 +23,15 @@ function Adminusers(){
                             <h2 className="font-semibold">{user.name}</h2>
                             <p className="text-gray-500">{user.email}</p>
                         </div>
-                        <button onClick={()=>handleblock(user.id)}className="rounded-lg bg-red-500 px-4 py-2 text-white">Block</button>
+                        {user.blocked?(
+                            <button onClick={()=>handleunblock(user.id)} className="rounded-lg bg-green-500 px-4 py-2 text-white">Unblock</button>
+                        ):(
+                            <button onClick={()=>handleblock(user.id)}className="rounded-lg bg-red-500 px-4 py-2 text-white">Block</button>
+                        )}
                         </div>
                 ))}
             </div>
         </div>
     )
 }
-export default Adminusers
+export default Adminusers;

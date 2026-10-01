@@ -19,6 +19,10 @@ function Login() {
           item.email === email &&
           item.password === password
       );
+      if(user&&user.blocked===true){
+        toast.error("your account is blocked")
+        return;
+      }
       if (user) {
         console.log("logged in user:",user);
         console.log("user id:",user.id);

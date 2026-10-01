@@ -45,6 +45,18 @@
       "stock": 17,
       "quantity": 1,
       "id": "6DGbPQtogT8"
+    },
+    {
+      "userId": "nvPBJZaey9k",
+      "productId": "3",
+      "name": "Hyaluronic Acid Serum",
+      "price": 699,
+      "image": "/hyaluronicacid.png",
+      "category": "Skincare",
+      "description": "Hyaluronic Acid Serum for an everyday skincare routine.",
+      "stock": 31,
+      "quantity": 1,
+      "id": "Skl22CwkSCc"
     }
   ],
   "users": [
@@ -53,14 +65,27 @@
       "email": "ridha@gmail.com",
       "password": "123456",
       "id": "IpxpJW9mlvI",
-      "blocked": true
+      "blocked": false
     },
     {
       "name": "hiiii",
       "email": "ridhaa@gmail.com",
       "password": "1234567",
       "id": "Bsl2c8oHgi4",
-      "blocked": true
+      "blocked": false
+    },
+    {
+      "name": "shifa ismail vk",
+      "email": "shifa@gmail.com",
+      "password": "552009",
+      "id": "nvPBJZaey9k",
+      "blocked": false
+    },
+    {
+      "name": "hewigbk",
+      "email": "hi@gmail.com",
+      "password": "123456789",
+      "id": "78Rhz8dT6kM"
     }
   ],
   "products": [
@@ -446,6 +471,26 @@
       "status": "cancelled",
       "date": "2026-09-30T08:55:58.632Z",
       "id": "YesK3OfRMWE"
+    },
+    {
+      "items": [
+        {
+          "userId": "nvPBJZaey9k",
+          "productId": "3",
+          "name": "Hyaluronic Acid Serum",
+          "price": 699,
+          "image": "/hyaluronicacid.png",
+          "category": "Skincare",
+          "description": "Hyaluronic Acid Serum for an everyday skincare routine.",
+          "stock": 31,
+          "quantity": 1,
+          "id": "3"
+        }
+      ],
+      "total": 699,
+      "status": "cancelled",
+      "date": "2026-10-01T05:46:34.000Z",
+      "id": "TBIvjLFzMJg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -9,6 +9,10 @@ export const blockusers=createAsyncThunk("adminusers/blockuser",async (id)=>{
     const res=await axios.patch(`http://localhost:3000/users/${id}`,{blocked:true});
     return res.data
 })
+export const unblockuser=createAsyncThunk("adminusers/unblockuser",async(id)=>{
+    const res=await axios.patch(`http://localhost:3000/users/${id}`,{blocked:false})
+    return res.data;
+})
 const adminusersslice=createSlice({
     name:"adminusers",
     initialState:{
@@ -22,6 +26,12 @@ const adminusersslice=createSlice({
         builder.addCase(blockusers.fulfilled,(state,action)=>{
             const index=state.users.findIndex((user)=>useReducer.id===action.payload.id)
             if(index!==-1){
+                state.users[index]=action.payload;
+            }
+        })
+        builder.addCase(unblockuser.fulfilled,(state,action)=>{
+            const index=state.users.findIndex((user)=>user.id===action.payload);
+            if(index!==1){
                 state.users[index]=action.payload;
             }
         })
