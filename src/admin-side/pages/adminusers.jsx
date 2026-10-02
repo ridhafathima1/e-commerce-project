@@ -1,7 +1,9 @@
-import {useEffect} from "react"
+import {useEffect,useState} from "react"
 import { useSelector,useDispatch } from "react-redux"
 import {fetchusers,blockusers,unblockuser} from "../../redux/adminusers";
 function Adminusers(){
+    const[search,setsearch]=useState("")
+    
     const handleunblock=(id)=>{
         dispatch(unblockuser(id))
     }
@@ -10,19 +12,22 @@ function Adminusers(){
     };
     const dispatch=useDispatch()
     const users=useSelector((state)=>state.adminusers.users)
+    const filteredusers=users.filter((user)=>user.name.toLowerCase().includes(search.toLowerCase())||
+    user.email.toLowerCase().includes(search.toLowerCase()))
     useEffect(()=>{
         dispatch(fetchusers());
     },[dispatch])
     return(
         <div className="p-8">
             <h1 className="mb-6 text-3xl font-bold">Users</h1>
+            <input type="text" placeholder="Search users..." value={search} onChange={(e)=>setsearch(e.target.value)} className="mb-6 w-full rounded-lg border p-3"/>
             <div className="space-y-4">
                 {users.length===0?(
                     <p className="rounded-xl bg-white p-6 text-center text-gray-500">
                         No users found
                     </p>
                 ):(
-                users.map((user)=>(
+                filteredusers.map((user)=>(
                     <div key={user.id} className="flex items-center justify-between rounded-xl bg-white p-5 shadow">
                         <div>
                             <h2 className="font-semibold">{user.name}</h2>
