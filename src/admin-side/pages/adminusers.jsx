@@ -17,11 +17,19 @@ function Adminusers(){
         <div className="p-8">
             <h1 className="mb-6 text-3xl font-bold">Users</h1>
             <div className="space-y-4">
-                {users.map((user)=>(
+                {users.length===0?(
+                    <p className="rounded-xl bg-white p-6 text-center text-gray-500">
+                        No users found
+                    </p>
+                ):(
+                users.map((user)=>(
                     <div key={user.id} className="flex items-center justify-between rounded-xl bg-white p-5 shadow">
                         <div>
                             <h2 className="font-semibold">{user.name}</h2>
                             <p className="text-gray-500">{user.email}</p>
+                            <p className="mt-1 text-sm text-gray-400">
+                                User ID:{user.id}</p>
+
                         </div>
                         {user.blocked?(
                             <button onClick={()=>handleunblock(user.id)} className="rounded-lg bg-green-500 px-4 py-2 text-white">Unblock</button>
@@ -29,7 +37,8 @@ function Adminusers(){
                             <button onClick={()=>handleblock(user.id)}className="rounded-lg bg-red-500 px-4 py-2 text-white">Block</button>
                         )}
                         </div>
-                ))}
+                ))
+            )}
             </div>
         </div>
     )
