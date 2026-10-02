@@ -9,13 +9,14 @@ function Adminproducts(){
     const [editid,seteditid]=useState(null)
     const[editname,seteditname]=useState("")
     const[editprice,seteditprice]=useState("")
+    const[search,setsearch]=useState("")
     const[editcategory,seteditcategory]=useState("")
      const [currentpage,setcurrentpage]=useState(1)
     const productsperpage=5;
    const dispatch=useDispatch()
    const products=useSelector((state)=>state.adminproducts.products);
    useEffect(()=>{
-    dispatch(fetchProducts());
+    dispatch(fetchproducts());
    },[dispatch])
    const handleedit=(product)=>{
     seteditid(product.id);
@@ -23,6 +24,7 @@ function Adminproducts(){
     seteditprice(product.price)
     seteditcategory(product.category)
    }
+   const filteredproducts=products.filter((product)=>product.name.toLowerCase().includes(search.toLowerCase()))
    const handleupdate=()=>{
     const updatedproduct={
         name:editname,
@@ -52,14 +54,15 @@ function Adminproducts(){
     }
     const lastindex=currentpage*productsperpage;
     const firstindex=lastindex-productsperpage;
-    const currentproducts=products.slice(firstindex,lastindex);
-    const totalpages=Math.ceil(products.length/productsperpage)
+    const currentproducts=filteredproducts.slice(firstindex,lastindex);
+    const totalpages=Math.ceil(filteredproducts.length/productsperpage)
 
    
     return (
         <div className="p-8">
             <h1 className="mb-6 text-3xl font-bold">Products</h1>
             <button onClick={()=>setform(true)}className="mb-6 rounded-lg bg-pink-600 px-5 py-3 font-semibold text-white">Add Product</button>
+            <input type="text" placeholder="search products....." value={search} onChange={(e)=>setsearch(e.target.value)} className="mb-6 w-full rounded-lg border p-3"/>
             {form&&(
                 <div className="mb-6 rounded-xl bg-white p-6 shadow">
                     <h2 className="mb-4 text-xl font-bold">Add Product</h2>
