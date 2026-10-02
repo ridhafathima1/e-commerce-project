@@ -10,6 +10,12 @@ export const addproduct=createAsyncThunk("adminproducts/addproduct",
         return res.data;
     }
 )
+export const updateproduct=createAsyncThunk("adminproducts/updateproduct",async({id,product})=>{
+const res=await axios.patch(`http://localhost:3000/products/${id}`,
+    product
+)
+return res.data
+})
 export const fetchProducts=createAsyncThunk(
     "adminproducts/fetchProducts",
     async()=>{
@@ -29,6 +35,12 @@ const adminproductslice=createSlice({
         })
         builder.addCase(addproduct.fulfilled,(state,action)=>{
             state.products.push(action.payload)
+        })
+        builder.addCase(updateproduct.fulfilled,(state,action)=>{
+            const index=state.products.findIndex((product)=>product.id===action.payload.id)
+            if(index!==-1){
+                state.products[index]=action.payload;
+            }
         })
         builder.addCase(deleteproduct.fulfilled,(state,action)=>{
             state.products=state.products.filter((product)=>product.id!==action.payload)

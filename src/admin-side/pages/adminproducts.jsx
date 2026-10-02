@@ -1,16 +1,38 @@
 import {useState,useEffect} from "react"
 import {useDispatch,useSelector} from "react-redux"
-import { fetchProducts,addproduct,deleteproduct } from "../../redux/adminproducts"
+import { fetchProducts,addproduct,deleteproduct,updateproduct } from "../../redux/adminproducts"
 function Adminproducts(){
     const[form,setform]=useState(false)
     const[name,setname]=useState("")
     const[price,setprice]=useState("")
     const[category,setcategory]=useState("")
+    const [editid,seteditid]=useState(null)
+    const[editname,seteditname]=useState("")
+    const[editprice,seteditprice]=useState("")
+    const[editcategory,seteditcategory]=useState("")
    const dispatch=useDispatch()
    const products=useSelector((state)=>state.adminproducts.products);
    useEffect(()=>{
     dispatch(fetchProducts());
    },[dispatch])
+   const handleedit=(product)=>{
+    seteditid(product.id);
+    seteditname(product.name)
+    seteditprice(product.price)
+    seteditcategory(product.category)
+   }
+   const handleupdate=()=>{
+    const updatedproduct={
+        name:editname,
+        price:Number(editprice),
+        category:editcategory,
+    }
+    dispatch(updateproduct({id:editid,product:updatedproduct}));
+    seteditid(null)
+    seteditname("")
+    seteditprice("")
+    seteditcategory("")
+   }
    const handledelete=(id)=>{
     dispatch(deleteproduct(id))
    }
@@ -40,6 +62,16 @@ function Adminproducts(){
                     <button onClick={()=>setform(false)} className="ml-3 rounded-lg bg-gray-300 px-5 py-2">Cancel</button>
                     </div>
             )}
+            {editid&&(
+                <div className="mb-6 rounded-xl bg-white p-6 shadow">
+<h2 className="mb-4 text-xl font-bold">Edit Product</h2>
+<input type="text" placeholder="Product Name" value={editname} onChange={(e)=>seteditname(e.target.value)} className="mb-3 w-full rounded-lg border p-3"/>
+<input type="Number" placeholder="price" value={editprice} onChange={(e)=>seteditprice(e.target.value)} className="mb-3 w-full rounded-lg border p-3"/>
+<input type="text" placeholder="Category" value={editcategory} onChange={(e)=>seteditcategory(e.target.value)} className="mb-3 w-full rounded-lg border p-3"/>
+<button onClick={handleupdate} className="rounded-lg bg-blue-600 px-5 py-2 text-white">Update Product</button>
+<button onClick={()=>seteditid(null)} className="ml-3 rounded-lg bg-gray-300 px-5 py-2">Cancel</button>
+                </div>
+            )}
             <div className="space-y-4">
                 {products.map((product)=>(
                     <div key={product.id} className="flex items-center justify-between rounded-xl bg-white p-4 shadow">
@@ -48,9 +80,11 @@ function Adminproducts(){
                             <p>{product.price}</p>
                             <p className="text-gray-500">{product.category}</p>
                             <button className="rounded-lg bg-red-500 px-4 py-2 text-white" onClick={()=>handledelete(product.id)}>Delete</button>
+                            <button  onClick={()=>handleedit(product)}className="mr-2 rounded-lg bg-blue-500 px-4 py-2 text-white">Edit</button>
                             </div>
                         </div>
                 ))}
+                
             </div>
         </div>
     )
