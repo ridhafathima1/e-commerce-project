@@ -10,6 +10,8 @@ function Adminproducts(){
     const[editname,seteditname]=useState("")
     const[editprice,seteditprice]=useState("")
     const[editcategory,seteditcategory]=useState("")
+     const [currentpage,setcurrentpage]=useState(1)
+    const productsperpage=5;
    const dispatch=useDispatch()
    const products=useSelector((state)=>state.adminproducts.products);
    useEffect(()=>{
@@ -48,6 +50,12 @@ function Adminproducts(){
        setcategory("")
        setform(false)
     }
+    const lastindex=currentpage*productsperpage;
+    const firstindex=lastindex-productsperpage;
+    const currentproducts=products.slice(firstindex,lastindex);
+    const totalpages=Math.ceil(products.length/productsperpage)
+
+   
     return (
         <div className="p-8">
             <h1 className="mb-6 text-3xl font-bold">Products</h1>
@@ -73,7 +81,7 @@ function Adminproducts(){
                 </div>
             )}
             <div className="space-y-4">
-                {products.map((product)=>(
+                {currentproducts.map((product)=>(
                     <div key={product.id} className="flex items-center justify-between rounded-xl bg-white p-4 shadow">
                         <div>
                             <h2 className="font-semibold">{product.name}</h2>
@@ -85,6 +93,12 @@ function Adminproducts(){
                         </div>
                 ))}
                 
+            </div>
+            <div className="mt-6 flex items-center justify-center gap-4">
+                <button onClick={()=>setcurrentpage(currentpage-1)} disabled={currentpage===1} className="rounded-lg bg-gray-300 px-4 py-2 disabled:opacity-50">Previous</button>
+                <span>Page{currentpage} of{totalpages}</span>
+                <button onClick={()=>setcurrentpage(currentpage+1)} disabled={currentpage===totalpages}
+                className="rounded-lg bg-gray-900 px-4 py-2 text-white disabled:opacity-50">Next</button>
             </div>
         </div>
     )
