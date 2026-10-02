@@ -1,6 +1,6 @@
 import {useState,useEffect} from "react"
 import {useDispatch,useSelector} from "react-redux"
-import { fetchProducts,addproduct,deleteproduct,updateproduct } from "../../redux/adminproducts"
+import { fetchproducts,addproduct,deleteproduct,updateproduct } from "../../redux/adminproducts"
 function Adminproducts(){
     const[form,setform]=useState(false)
     const[name,setname]=useState("")

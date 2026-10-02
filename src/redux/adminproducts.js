@@ -16,7 +16,7 @@ const res=await axios.patch(`http://localhost:3000/products/${id}`,
 )
 return res.data
 })
-export const fetchProducts=createAsyncThunk(
+export const fetchproducts=createAsyncThunk(
     "adminproducts/fetchProducts",
     async()=>{
         const res=await axios.get("http://localhost:3000/products");
@@ -30,7 +30,7 @@ const adminproductslice=createSlice({
     },
     reducers:{},
     extraReducers:(builder)=>{
-        builder.addCase(fetchProducts.fulfilled,(state,action)=>{
+        builder.addCase(fetchproducts.fulfilled,(state,action)=>{
             state.products=action.payload;
         })
         builder.addCase(addproduct.fulfilled,(state,action)=>{

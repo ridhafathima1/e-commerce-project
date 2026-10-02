@@ -57,6 +57,18 @@
       "stock": 31,
       "quantity": 1,
       "id": "Skl22CwkSCc"
+    },
+    {
+      "userId": "78Rhz8dT6kM",
+      "productId": "2",
+      "name": "Vitamin C Serum",
+      "price": 499,
+      "image": "/vitamincserum.png",
+      "category": "Skincare",
+      "description": "Vitamin C Serum for an everyday skincare routine.",
+      "stock": 24,
+      "quantity": 1,
+      "id": "FG9ns7RyhW4"
     }
   ],
   "users": [
@@ -485,6 +497,26 @@
       "status": "cancelled",
       "date": "2026-10-01T05:46:34.000Z",
       "id": "TBIvjLFzMJg"
+    },
+    {
+      "items": [
+        {
+          "userId": "78Rhz8dT6kM",
+          "productId": "2",
+          "name": "Vitamin C Serum",
+          "price": 499,
+          "image": "/vitamincserum.png",
+          "category": "Skincare",
+          "description": "Vitamin C Serum for an everyday skincare routine.",
+          "stock": 24,
+          "quantity": 1,
+          "id": "2"
+        }
+      ],
+      "total": 499,
+      "status": "cancelled",
+      "date": "2026-10-02T07:49:18.127Z",
+      "id": "QAHt8hnnQSM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

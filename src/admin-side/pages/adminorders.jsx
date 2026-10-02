@@ -1,7 +1,8 @@
-import {useEffect} from "react"
+import {useEffect,useState} from "react"
 import {useDispatch,useSelector} from "react-redux"
 import { fetchorders } from "../../redux/adminorders"
 function Adminorders(){
+    const[selectedorder,setselectedorder]=useState(null)
     const dispatch=useDispatch()
     const orders=useSelector((state)=>state.adminorders.orders)
     useEffect(()=>{
@@ -23,6 +24,7 @@ function Adminorders(){
                         ))}
                         <p className="mt-2">Total {order.total}</p>
                         <p className="mt-1 text-gray-500">Status:{order.status}</p>
+                        <button onClick={()=>setselectedorder(order)} className="mt-3 rounded-lg bg-blue-600 px-4 py-2 text-white">View Details</button>
                     </div>
                 ))}
             </div>

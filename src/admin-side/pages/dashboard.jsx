@@ -1,22 +1,20 @@
-import {useState,useEffect} from "react"
-import axios from "axios"
-import {Link} from "react-router-dom"
+import {useEffect} from "react"
 import {Package,Users,ShoppingCart,IndianRupee,} from "lucide-react"
+import {useDispatch,useSelector} from "react-redux"
+import { fetchproducts } from "../../redux/adminproducts" 
+import { fetchusers } from "../../redux/adminusers"
+import { fetchorders } from "../../redux/adminorders"
 function Dashboard(){
-    const[products,setproducts]=useState([])
-    const[users,setusers]=useState([])
-    const[orders,setorders]=useState([])
-    const[revenue,setrevenue]=useState(0);
+    const dispatch=useDispatch();
+    const products=useSelector((state)=>state.adminproducts.products)
+   const users=useSelector((state)=>state.adminusers.users)
+   const orders=useSelector((state)=>state.adminorders.orders)
+   const revenue=orders.reduce((sum,order)=>sum+Number(order.total||0),0)
     useEffect(()=>{
-        axios.get("http://localhost:3000/products")
-        .then ((res)=>{setproducts(res.data)})
-        axios.get("http://localhost:3000/users")
-        .then((res)=>{setusers(res.data)})
-        axios.get("http://localhost:3000/orders")
-        .then((res)=>{setorders(res.data)
-        const total=res.data.reduce((sum,order)=>sum+Number(order.total||0),0)
-        setrevenue(total);})
-    },[])
+      dispatch(fetchproducts())
+       dispatch(fetchusers())
+        dispatch(fetchorders())
+    },[dispatch])
     return (
         <div>
             <div className="flex">
